@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "py835"
-version = "0.1.0"
+version = "0.1.1"
 description = "py835 is a wrapper for pyx12 used by DHR Health for parsing .835 files."
 authors = [
     { name = "DHR Health - Data Team", email = "samuel.cavazos@dhr-rgv.com" }
