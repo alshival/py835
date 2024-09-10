@@ -17,7 +17,8 @@ classifiers = [
     "Operating System :: OS Independent"
 ]
 dependencies = [
-    "pyx12>=2.3.3"
+    "pyx12>=2.3.3",
+    "setuptools>=74.1.2"
 ]
 
 [project.urls]
