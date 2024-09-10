@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools","pyx12==2.3.3,"wheel"]
+requires = ["setuptools","pyx12","wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
