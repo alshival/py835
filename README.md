@@ -40,38 +40,34 @@ result = py835.parse('path/to/your/file.835')
 ```
 
 ### Example Output
-The output is a list of dictionaries, where each dictionary represents a segment of the 835 file.
+The output is a dictionary where the keys are Patient Control Numbers, and the values are lists of segments related to that patient.
 ```
-[
-  {
-    "segment_id": "ISA",
-    "segment_name": "Interchange Control Header",
-    "elements": [
-      {
-        "element_index": 1,
-        "element_name": "Authorization Information Qualifier",
-        "element_value": "00"
-      },
-      {
-        "element_index": 2,
-        "element_name": "Authorization Information",
-        "element_value": "          "
-      },
-      ...
+{
+    "R7836647": [
+        {
+            "segment_id": "CLP",
+            "segment_name": "Claim Payment Information",
+            "elements": [
+                {"element_index": 1, "element_name": "Patient Control Number", "element_value": "R7836647"},
+                {"element_index": 2, "element_name": "Claim Status Code", "element_value": "4"},
+                {"element_index": 3, "element_name": "Total Claim Charge Amount", "element_value": "39.16"},
+                ...
+            ]
+        },
+        {
+            "segment_id": "NM1",
+            "segment_name": "Patient Name",
+            "elements": [
+                {"element_index": 1, "element_name": "Entity Identifier Code", "element_value": "QC"},
+                {"element_index": 2, "element_name": "Patient Last Name", "element_value": "LOZANO MONTALVO"},
+                ...
+            ]
+        },
+        ...
+    ],
+    "R9876543": [
+        // Segments for another patient
     ]
-  },
-  {
-    "segment_id": "GS",
-    "segment_name": "Functional Group Header",
-    "elements": [
-      {
-        "element_index": 1,
-        "element_name": "Functional Identifier Code",
-        "element_value": "HP"
-      },
-      ...
-    ]
-  },
-  ...
-]
+}
+
 ```
