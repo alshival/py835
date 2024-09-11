@@ -1,0 +1,106 @@
+Code,Description
+01,Inappropriate combination of service type code and service type code descriptor.Activation Date: 11/01/2017
+02,Inappropriate service type code(s)Activation Date: 11/01/2017
+03,The submitted procedure code(s) is not supported.Activation Date: 11/01/2017
+04,Inquiries related to procedure codes are not supported.Activation Date: 11/01/2017
+05,The submitted modifier code(s) is not supported.Activation Date: 11/01/2017
+06,Inquiries related to modifier codes are not supported.Activation Date: 11/01/2017
+07,The submitted diagnosis code(s) is not supported.Activation Date: 11/01/2017
+08,Inquiries related to diagnosis codes are not supported.Activation Date: 11/01/2017
+09,Duplicate IDActivation Date: 11/01/2017 | Deactivation Date: 08/01/2019
+10,Invalid subscriber or insured IDActivation Date: 11/01/2017
+11,Missing subscriber or insured IDActivation Date: 11/01/2017
+12,Missing subscriber or insured nameActivation Date: 11/01/2017
+13,Invalid date of deathActivation Date: 11/01/2017
+14,Missing date of deathActivation Date: 11/01/2017
+15,Missing provider nameActivation Date: 11/01/2017
+16,Invalid taxonomyActivation Date: 11/01/2017
+17,Missing taxonomyActivation Date: 11/01/2017
+18,Missing provider stateActivation Date: 11/01/2017
+19,Invalid referring provider IDActivation Date: 11/01/2017
+20,Missing referring provider IDActivation Date: 11/01/2017
+21,The request date(s) is not within the provider's plan enrollment period.Activation Date: 11/01/2017
+22,The request date(s) precedes the date of birth.Activation Date: 11/01/2017
+23,The date of death in our records precedes the request date(s).Activation Date: 11/01/2017
+24,The request date(s) is not within the allowable inquiry period.Activation Date: 11/01/2017
+25,The request date(s) is in the future.Activation Date: 11/01/2017
+26,Invalid request date(s)Activation Date: 11/01/2017
+27,Invalid patient IDActivation Date: 11/01/2017
+28,Missing patient IDActivation Date: 11/01/2017
+29,Missing patient nameActivation Date: 11/01/2017
+30,Invalid case numberActivation Date: 11/01/2017
+31,Missing case numberActivation Date: 11/01/2017
+32,Invalid provider addressActivation Date: 11/01/2017
+33,Missing provider addressActivation Date: 11/01/2017
+34,The referral number was not found.Activation Date: 11/01/2017
+35,Invalid diagnosis code(s)Activation Date: 11/01/2017
+36,Missing diagnosis code(s)Activation Date: 11/01/2017
+37,Invalid procedure code(s)Activation Date: 11/01/2017
+38,Missing procedure code(s)Activation Date: 11/01/2017
+39,Invalid modifier code(s)Activation Date: 11/01/2017
+40,Missing modifier code(s)Activation Date: 11/01/2017
+41,Invalid authorization numberActivation Date: 11/01/2017
+42,Invalid referral numberActivation Date: 11/01/2017
+43,Missing referral numberActivation Date: 11/01/2017
+44,The authorized quantity of patient requests was exceeded.Activation Date: 11/01/2017
+45,The provider is out of network for the member.Activation Date: 11/01/2017
+46,The responding system is unable to complete the request at the current time.Activation Date: 11/01/2017
+47,The provider ID does not match our records and we were not able to identify the provider.Activation Date: 11/01/2017
+48,Inappropriate combination of qualifier and product or service code.Activation Date: 11/01/2017
+49,Inappropriate combination of provider ID and taxonomy.Activation Date: 11/01/2017
+50,Inappropriate combination of place of service and product or service code.Activation Date: 11/01/2017
+51,Duplicate patient IDActivation Date: 11/01/2017 | Deactivation Date: 08/01/2019
+52,The service is inconsistent with the patient's age.Activation Date: 11/01/2017
+53,The diagnosis is inconsistent with the patient's age.Activation Date: 11/01/2017
+54,The patient's date of birth does not match our records.Activation Date: 11/01/2017
+55,The subscriber or insured was not found.Activation Date: 11/01/2017
+56,The subscriber ID or insured ID is not unique (returns multiple matches) in our records.Activation Date: 11/01/2017 | Deactivation Date: 08/01/2019
+57,"Although the subscriber was found, the patient was not found.Activation Date: 11/01/2017"
+58,The submitted group or plan does not match our records.Activation Date: 11/01/2017
+59,A response was not received from the information source's system.Activation Date: 11/01/2017
+60,The submitted services are inconsistent with the submitted diagnosis code(s).Activation Date: 11/01/2017
+61,Invalid provider IDActivation Date: 11/01/2017
+62,Missing provider IDActivation Date: 11/01/2017
+63,This service is not medically appropriate for this patient.Activation Date: 11/01/2017
+64,The submitted authorization number does not match our records.Activation Date: 11/01/2017
+65,Invalid date of birthActivation Date: 11/01/2017
+66,Missing date of birthActivation Date: 11/01/2017
+67,Missing gender codeActivation Date: 11/01/2017
+68,The provider ID does not match our records but we were able to identify the provider.Activation Date: 11/01/2017
+69,Invalid member IDActivation Date: 11/01/2017
+70,The responding system is unable to respond within the alloted time.Activation Date: 11/01/2017
+71,Missing last nameActivation Date: 11/01/2017
+72,Missing first nameActivation Date: 11/01/2017
+73,Missing member IDActivation Date: 11/01/2017
+74,The member ID does not match our records.Activation Date: 11/01/2017
+75,The gender code does not match our records.Activation Date: 11/01/2017
+76,The first name does not match our records.Activation Date: 11/01/2017
+77,The last name does not match our records.Activation Date: 11/01/2017
+78,The middle name does not match our records.Activation Date: 11/01/2017
+79,Invalid name suffixActivation Date: 11/01/2017
+80,Missing name suffixActivation Date: 11/01/2017
+81,The name suffix does not match our records.Activation Date: 11/01/2017
+82,"There were duplicates within the minimum number of service types supported (ten), so there are fewer than ten responses.Activation Date: 11/01/2017"
+83,There were duplicate service type inquiries so the number of responses does not match the number of inquiries.Activation Date: 11/01/2017
+84,The number of service type inquiries exceeds the number of responses we can return.Activation Date: 11/01/2017
+85,"We have responded with general benefit information, however the submitted procedure code requires separate medical review.Activation Date: 11/01/2017"
+86,"We have responded, however the submitted procedure code requires separate medical review and prior authorization.Activation Date: 11/01/2017"
+87,"We have responded with general benefit information, however the submitted service type code requires separate medical review.Activation Date: 11/01/2017"
+88,"We have responded, however the submitted service type code requires separate medical review and prior authorization.Activation Date: 11/01/2017"
+89,Invalid group numberActivation Date: 11/01/2017
+90,Missing group numberActivation Date: 11/01/2017
+91,The responding system cannot process this real-time inquiry in real-time mode.Activation Date: 11/01/2017
+92,Duplicate first nameActivation Date: 08/24/2018
+93,Duplicate last nameActivation Date: 08/24/2018
+94,Duplicate date of birthActivation Date: 08/24/2018
+95,Duplicate policy(s)Activation Date: 08/24/2018
+96,A date range greater than 12 months is not supported.Activation Date: 08/24/2018
+97,The date range of the inquiry exceeds the period of time supported.Activation Date: 08/24/2018
+98,The member ID is not unique (returns multiple matches) in our records.Activation Date: 08/01/2019
+99,Inappropriate combination of service type codesActivation Date: 08/01/2019
+100,Service type code(s) on this request is valid only for responses and is not valid on requests.Activation Date: 08/01/2019
+101,The provider ID does match our records but has not met the eligibility requirements to send or receive this transaction.Activation Date: 08/01/2019
+102,"Benefit utilization information for this response, such as remaining or accumulator amounts, is restricted by the responding system.Activation Date: 10/01/2019"
+103,Information source is not responding; clearinghouse/intermediary has temporarily suspended request submissions.Activation Date: 07/01/2021
+104,Information Source's system encountered errors preventing benefit related information from being returned.Activation Date: 07/01/2021
+105,"Information Source's system encountered errors preventing eligibility, coverage and/or policy related information from being returned.Activation Date: 07/01/2021"

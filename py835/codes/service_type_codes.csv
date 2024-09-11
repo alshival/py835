@@ -1,0 +1,219 @@
+Code,Description
+1,"Medical CareMedical services to diagnose and/or treat a medical condition, illness, or injuryStart: 09/20/2009"
+2,SurgicalSurgical services provided by a healthcare providerStart: 09/20/2009
+3,"ConsultationCounseling and/or coordination of care with other Physicians, other qualified Healthcare Providers or agenciesStart: 09/20/2009"
+4,Diagnostic X-RayDiagnostic x-ray provided by a  healthcare providerStart: 09/20/2009
+5,Diagnostic LabDiagnostic lab provided by a healthcare providerStart: 09/20/2009
+6,Radiation TherapyRadiation therapy provided by a healthcare providerStart: 09/20/2009
+7,AnesthesiaAnesthesia services provided by a healthcare providerStart: 09/20/2009
+8,Surgical AssistanceAssistant surgeon/surgical assistance provided by a healthcare provider if required because of the complexity of the surgical proceduresStart: 09/20/2009
+9,Hearing AidSmall electronic device that is worn in or above the ear.Start: 09/01/2023
+10,"BloodThe allotment of whole blood, blood plasma, or blood derivativesStart: 09/20/2009"
+11,Durable Medical Equipment UsedUsed equipment needed for medical reasons to be used by a person that is ill or injured and is ordered by a health care provider for use in the home.Start: 09/20/2009
+12,Durable Medical Equipment PurchasedPurchased equipment needed for medical reasons to be used by a person that is ill or injured and is ordered by a healthcare provider for use in the home.Start: 09/20/2009
+13,Hearing Aid Power SourceBatteries or other type of device used to charge a hearing aidStart: 09/01/2023
+14,"Renal SuppliesSupplies to support treatment of kidneys, or bladder functions.  (Example: Dialysis Supplies and/or catheters)Start: 09/20/2009"
+15,Sleep StudyStart: 01/01/2024
+17,Pre-Admission TestingServices related to the preparation for admission to establish the patients current health status.Start: 09/20/2009
+18,Durable Medical Equipment RentalRental equipment needed for medical reasons to be used by a person that is ill or injured and is ordered by a healthcare provider for use in the home.Start: 09/20/2009
+19,Pneumonia VaccineServices provided by a physician or other healthcare provider related to administration of Pneumococcal Pneumonia vaccination.Start: 09/20/2009
+20,Second Surgical OpinionSecond professional opinion sought to verify or confirm the necessity for surgical proceduresStart: 09/20/2009
+21,Third Surgical OpinionThird professional opinion sought to verify or confirm the necessity for surgical proceduresStart: 09/20/2009
+22,Social WorkServices related to a systematic way of helping individuals and groups towards better adaptation to societyStart: 09/20/2009
+23,"Diagnostic DentalThe translation of data gathered by clinical and radiographic examination into an organized, classified definition of conditions present.Start: 09/20/2009"
+24,"PeriodonticsThe art and science of examination, diagnosis, and treatment of diseases affecting the periodontium; a study of the supporting structures of the teeth, normal anatomy and physiology and the deviations.Start: 09/20/2009"
+25,"RestorativeBroad term applied to any restorations to the tooth/teeth structure(s). Anterior teeth include up to five surface classifications - Mesial, Distal, Incisal, Lingual and Labial. Posterior teeth include up to five surface classifications: Mesial, Distal, Occlusal, Lingual and Buccal.Start: 09/20/2009"
+26,"EndodonticsThe branch of dentistry that is concerned with the morphology, physiology and pathology of the dental pulp and periradicular (gum) tissues.Start: 09/20/2009"
+27,"Maxillofacial ProstheticsThe branch of prosthetics is concerned with the restoration of stomatognathic and associated facial structure that have been affected by disease, injury, surgery, or congenital defect.Start: 09/20/2009"
+28,Adjunctive Dental ServicesTypically these services involve a drug such as anesthesia or other substances that serve as a supplemental purpose in dental therapy.Start: 09/20/2009
+30,Plan Coverage and General BenefitsPlan coverage and general benefits for the member's policy or contract.Start: 09/20/2009 | Last Modified: 11/01/2019
+32,Plan Waiting PeriodStart: 09/20/2009
+33,ChiropracticManipulations and modalities provided by a healthcare providerStart: 09/20/2009
+34,Chiropractic ModalityStart: 09/20/2009 | Stop: 07/01/2016
+35,Dental CareThe treatment of the teeth and their supporting structures.Start: 09/20/2009
+36,"Dental CrownsAn artificial replacement for the natural crown of the tooth covering all five surfaces (Anterior teeth surface classifications - Mesial, Distal, Incisal, Lingual and Labial. Posterior teeth surface classifications: Mesial, Distal, Occlusal, Lingual and Buccal.Start: 09/20/2009"
+37,Dental AccidentSupplies or appliances for care of teeth due to accidental injury provided by healthcare providerStart: 09/20/2009
+38,"OrthodonticsThe area of dentistry concerned with the supervision, guidance, and correction of the growing and mature orofacial structures. This includes conditions that require movement of the teeth or correction of the malrelationships and malformations of related structures by the adjustment of relationships between and among teeth and facial bones by the application of forces or the stimulation and redirection of functional forces within the craniofacial complex.Start: 09/20/2009"
+39,"ProsthodonticsThe part of dentistry pertaining to the restoration and maintenance of oral function, comfort, appearance and health of the patient by replacement of missing teeth and contiguous tissues with artificial substitutes. It has three main branches: removable prosthodontics, fixed prosthodontics and maxillofacial prosthetics.Start: 09/20/2009"
+40,"Oral SurgeryDiagnosis and treatment of disorders of the mouth, teeth, jaws and facial structure provided by a healthcare providerStart: 09/20/2009"
+41,Preventive DentalThe dental procedures in dental practice and health programs that prevent the occurrence of oral diseases.Start: 09/20/2009 | Last Modified: 01/24/2010
+42,Home Health CareHealthcare services rendered in the home by a healthcare providerStart: 09/20/2009
+43,Home Health PrescriptionsStart: 09/20/2009
+45,HospiceAn integrated set of services and supplies to provide palliative and supportive care to terminally ill patients.Start: 09/20/2009
+46,"Respite CareServices related to temporary care of a dependent elderly, ill, or handicapped person, providing relief for their usual caregiversStart: 09/20/2009"
+47,"HospitalizationHospital Inpatient and Outpatient services and supplies for a patient who may or may not have been admitted to a hospital, for the purpose of receiving medical care or other health services.Start: 09/20/2009"
+49,Hospital - Room and BoardStart: 09/20/2009
+54,Long Term CareCare provided for an individual when they cannot care for themselves within the home or in a facilityStart: 09/20/2009
+55,Major MedicalStart: 09/20/2009
+56,"Medically Related TransportationAmbulance, Ambulate or other Medical transport servicesStart: 09/20/2009"
+60,Plan CoverageIndicates whether a patient has active or inactive coverage for the service date requested.Start: 09/20/2009 | Last Modified: 11/01/2019
+61,In-vitro FertilizationServices to treat infertilityStart: 09/20/2009
+62,MRI ScanDiagnostic MRI (Magnetic Resonance Imaging) services.Start: 09/20/2009
+63,"Donor ProceduresServices related to the collection of tissues, organs, or fluids for use in the treatment for another personStart: 09/20/2009"
+64,AcupunctureA system of alternative treatment that involves pricking the skin or tissues with needlesStart: 09/20/2009
+65,Newborn CareManagement of the infant during the transition to extra uterine life and subsequent period of stabilizationStart: 09/20/2009
+66,PathologyCreation of slides from tissues and its interpretation provided by a healthcare providerStart: 09/20/2009
+67,Smoking CessationTreatment to assist in the discontinuation of the use of nicotineStart: 09/20/2009
+68,Well Baby CareMedical services and physician visits which are recommended by the American Pediatric Association as appropriate and routine care for a child to a specific age limit.Start: 09/20/2009
+69,"MaternityServices related to maternity care including related conditions resulting in childbirth when provided, or ordered and billed by a physician or nurse midwifeStart: 09/20/2009"
+70,TransplantsServices related to the transfer of living organs or tissue from one body to another.Start: 09/20/2009
+71,"AudiologyServices related to hearing disorders, including evaluation of hearing function and rehabilitation of patients with hearing impairmentStart: 09/20/2009"
+72,Inhalation TherapyServices related to the use of inhaled agents to treat respiratory diseases and conditionsStart: 09/20/2009
+73,"Diagnostic MedicalServices required to determine the diagnose to treat a medical condition, illness, or injuryStart: 09/20/2009"
+74,"Private Duty NursingA nurse who is hired to provide focused care to an individual patient in a hospital, clinic, nursing home or patient's homeStart: 09/20/2009"
+75,ProstheticsA device that is used to replace a part of the body that is missing.Start: 09/20/2009 | Last Modified: 07/01/2016
+76,DialysisThe process by which uric acid and urea are removed from circulating blood by means of a dialyzerStart: 09/20/2009
+77,OtologyServices related to diagnosis and treatment of the ear and related structuresStart: 09/20/2009
+78,ChemotherapyThe treatment of disease by means of chemicals that have a specific toxic effect upon the disease-producing microorganisms or that selectively destroy cancerous tissue.Start: 09/20/2009
+79,"Allergy TestingA skin or blood test to determine what substance, or allergen, may trigger an allergic response in a personStart: 09/20/2009"
+80,ImmunizationsThe introduction of a vaccine with the goal of producing immunityStart: 09/20/2009
+81,Routine PhysicalA physical examination performed on asymptomatic patients for medical screening purposes.Start: 09/20/2009
+82,Family PlanningEducational services that assists individuals and couples to anticipate and attain their desired number of children and the spacing and timing of their births. It is achieved through use of contraceptive methods and the treatment of involuntary infertility.Start: 09/20/2009
+83,InfertilityServices to diagnose and/or treat infertility. Covered services may include assisted reproductive technology procedures.Start: 09/20/2009
+84,AbortionServices related to the elective termination of a pregnancyStart: 09/20/2009
+85,HIV - AIDS TreatmentServices related to diagnosis and treatment of HIV - AIDSStart: 09/20/2009
+86,Emergency ServicesServices provided by healthcare providers for the treatment of a sudden and unexpected medical condition or injury which requires immediate medical attentionStart: 09/20/2009
+87,Cancer TreatmentServices related to diagnosis and treatment of cancer not performed by an OncologistStart: 09/20/2009
+88,"Retail/Independent PharmacyA licensed entity that dispenses prescription drugs and provides professional pharmacy services, such as clinical pharmacy consulting respective to the dispensing function. The entity may be a retail/chain or independent pharmacy or any other entity which dispenses prescription drugs.Start: 09/20/2009 | Last Modified: 05/01/2017"
+89,Free Standing Prescription DrugMembers have separate cost sharing for prescription drugs and medical coverage.Start: 09/20/2009
+90,Mail Order PharmacyA mail order pharmacy delivers medications directly to patients through the mail.Start: 09/20/2009 | Last Modified: 05/01/2017
+91,"Brand Name Prescription DrugThe original formulation of a prescription drug, approved by the FDA for distribution.Start: 09/20/2009"
+92,"Generic Prescription DrugGeneric drugs are copies of brand-name drugs that have exactly the same dosage, intended use, effects, side effects, route of administration, risks, safety, and strength as the original drug. In other words, their pharmacological effects are exactly the same as those of their brand-name counterparts.Start: 09/20/2009"
+93,PodiatryProfessional services of a physician or other healthcare provider for the care or treatment of conditions of the foot.Start: 09/20/2009
+94,Dental and prediagnostic tests and examinationsRefer to the American Dental Association Code on Dental Procedures and Nomenclature (CDT Code).Start: 03/01/2019
+95,Periodontal Surgical ServicesRefer to the American Dental Association Code on Dental Procedures and Nomenclature (CDT Code).Start: 03/01/2019
+96,"Adjustment to dentures/repairs to complete dentures, denture rebase procedures, and denture reline proceduresRefer to the American Dental Association Code on Dental Procedures and Nomenclature (CDT Code).Start: 03/01/2019"
+97,"Dental, non-surgical extractionsRefer to the American Dental Association Code on Dental Procedures and Nomenclature (CDT Code).Start: 03/01/2019"
+98,Prescription DrugStart: 03/01/2019
+99,"Bariatric services - Services that deal with the causes, education, prevention and treatment of obesity.Start: 07/01/2019"
+A4,PsychiatricServices related to the diagnosis or treatment of mental health.Start: 09/20/2009
+A6,"PsychotherapyProfessional services, including individual or group therapy by providers such as psychiatrists, psychologists, clinical social workers, or psychiatric nurses.Start: 09/20/2009"
+A7,Psychiatric - InpatientStart: 09/20/2009
+A8,Psychiatric - OutpatientStart: 09/20/2009
+A9,"RehabilitationServices related to facilitate the process of recovery from injury, illness, or disease to as normal a condition as possibleStart: 09/20/2009"
+AB,Rehabilitation - InpatientStart: 09/20/2009
+AC,Rehabilitation - OutpatientStart: 09/20/2009
+AD,"Occupational TherapyProfessional and facility occupational therapy services performed by an occupational therapist, physician or other healthcare provider at a hospital, office or other covered facility.Start: 09/20/2009"
+AE,"Physical MedicineServices related to the diagnosis, evaluation, and management of persons of all ages with physical and/or cognitive impairment and disability.Start: 09/20/2009"
+AF,"Speech TherapyProfessional and facility speech therapy services performed by a speech therapist, physician or other healthcare provider at a hospital, office or other covered facility.Start: 09/20/2009"
+AG,Skilled Nursing CareServices for a patient in a skilled nursing facility for the purpose of receiving medical care or other health services.Start: 09/20/2009
+AI,"Substance AbuseServices provided at a hospital, office or other covered facility as they are related to the diagnosis and treatment of Substance Abuse.Start: 09/20/2009"
+AJ,Alcoholism TreatmentServices related to the management of Alcohol dependencies or addictionStart: 09/20/2009
+AK,"Drug AddictionServices related to the management of Drug dependencies or addiction, excluding AlcoholStart: 09/20/2009"
+AL,"OptometryRoutine vision services furnished by an optometrist. May include coverage for eyeglasses, contact lenses, routine eye exams, and/or vision testing for the prescribing or fitting of eyeglasses or contact lenses.Start: 09/20/2009"
+AM,FramesThe framework for a pair of eyeglassesStart: 09/20/2009
+AO,"LensesA piece of transparent substance having two opposite surfaces either both curved or one curved and one plane, used in an optical device in correcting defects of vision.Start: 09/20/2009"
+AP,Routine Eye ExamA series of tests to evaluate an individual's vision and check for eye diseases.Start: 09/20/2009
+AQ,"Nonmedically Necessary Physical (These physicals are required by other entities e.g., insurance application, pilot license, employment or school)A physical examination performed on asymptomatic patients for medical screening purposes.Start: 09/20/2009"
+AR,"Experimental Drug TherapyTreatment of a physical or mental condition using non-generally accepted drugs, such as not FDA approved, Clinical Trial.Start: 09/20/2009"
+B1,Burn CareServices related to the treatment of BurnsStart: 09/20/2009
+B2,Brand Name Prescription Drug - FormularyLists of brand name drugs covered and published by the health plan/payer/processor/PBM to help physicians reach clinically and economically appropriate prescribing decisions for patients.Start: 09/20/2009
+B3,Brand Name Prescription Drug - Non-FormularyA brand name drug that is not listed on the covered and published list of the health plan/payer/processor/PBM.Start: 09/20/2009
+BA,Independent Medical EvaluationServices when a doctor/physical therapist/chiropractor/psychologist/neuropsychologist who has not previously been involved in a person's care examines an individual. There is no doctor/therapist-patient relationship.Start: 09/20/2009
+BB,Psychiatric Treatment Partial HospitalizationStart: 09/20/2009 | Last Modified: 03/01/2023
+BC,Day Care (Psychiatric)Start: 09/20/2009 | Last Modified: 03/01/2023
+BD,"Cognitive TherapyA type of psychotherapy in which negative patterns of thought, are challenged in order to alter unwanted behavior patterns or treat mood disorders.Start: 09/20/2009"
+BE,"Massage TherapyThe manipulation of muscles and other soft tissues of the body by a therapist for the treatment of health conditions such as pain, cancer, fibromyalgia, HIV/AIDS, depression.Start: 09/20/2009"
+BF,Pulmonary RehabilitationServices and instructional guidance administered to an individual suffering from respiratory disease in an attempt to improve the quality of life for the patient.Start: 09/20/2009
+BG,Cardiac RehabilitationServices and instructional guidance rendered by a physician or other healthcare provider in a hospital or covered facility that are designed to help an individual recover from a cardiovascular eventStart: 09/20/2009
+BH,"PediatricTreatment or care related to infants, children, and adolescentsStart: 09/20/2009"
+BI,Nursery Room and BoardTreatment or care related to newbornsStart: 09/20/2009
+BK,"OrthopedicServices related to the correction or prevention of deformities, disorders, or injuries of the skeleton and associated structures.Start: 09/20/2009"
+BL,CardiacServices of or relating to the heartStart: 09/20/2009
+BM,"LymphaticServices related to a lymph, lymph node, or a lymphatic vesselStart: 09/20/2009"
+BN,"GastrointestinalServices to treat disorders of the stomach and intestines, and related systemsStart: 09/20/2009"
+BP,EndocrineServices related to the systems that secrete hormonesStart: 09/20/2009
+BQ,NeurologyServices related to the treatment of the nerves or nervous system.Start: 09/20/2009
+BT,GynecologicalMedical care and management of the female reproductive system and associated disorders provided by a physician or other healthcare provider.Start: 09/20/2009
+BU,"ObstetricalMedical care and management related to the care of a woman prior, during and after pregnancy, provided by a physician or other healthcare provider.Start: 09/20/2009"
+BV,Obstetrical/GynecologicalStart: 09/20/2009
+BW,Mail Order Prescription Drug: Brand NameStart: 09/20/2009 | Stop: 07/01/2016
+BX,Mail Order Prescription Drug: GenericStart: 09/20/2009 | Stop: 07/01/2016
+BY,Physician Visit - SickProfessional services rendered by a physician or other healthcare provider during a non-routine visit related to a illness.Start: 09/20/2009
+BZ,Physician Visit - WellProfessional services rendered by a physician or other healthcare provider during a routine or preventative care visit.Start: 09/20/2009
+C1,Coronary CareTreatment of diseases of the arteries of the heartStart: 09/20/2009
+CK,Screening X-rayX-ray services provided by a physician or other healthcare provider for the purpose of preventative care.Start: 09/20/2009
+CL,Screening laboratoryLaboratory services provided by a physician or other healthcare provider for the purpose of preventative care.Start: 09/20/2009
+CM,"Mammogram, High Risk PatientMammography services for patients that have been identified with a greater than normal risk for breast cancers and related diseases.Start: 09/20/2009"
+CN,"Mammogram, Low Risk PatientMammography services for patients that have been identified with a normal risk for breast cancers and related diseases.Start: 09/20/2009"
+CO,Flu VaccinationServices provided by a physician or other healthcare provider related to the administration of influenza virus vaccination.Start: 09/20/2009
+CP,Eyewear AccessoriesServices related to Eyewear and Eyewear AccessoriesStart: 09/20/2009
+CQ,"Case ManagementServices that assesses, plans, implements, coordinates, monitors, and evaluates the options and services required to meet the client's health and human service needsStart: 09/20/2009"
+DG,DermatologyServices provided by a physician or other healthcare provider involving the skin and its diseases.Start: 09/20/2009
+DM,Durable Medical EquipmentDurable medical equipment that can withstand repeated use and is primarily and customarily used to serve a medical purpose and generally is not useful to a person in the absence of an illness or injury.Start: 09/20/2009
+DS,"Diabetic SuppliesBlood sugar (glucose) test strips, monitors, insulin, lancet devices and lancets, glucose control solutions used to monitor and assist in the treatment of diabetes.Start: 09/20/2009"
+E0,"Applied Behavioral Analysis TherapyServices related to the assessment and treatment of learning and/or developmental disabilities to include techniques and principles to bring about meaningful and positive changes in behavior, improve attention, focus, memory, academics and/or increase language, communication and social skills.Start: 09/20/2009 | Last Modified: 07/01/2017"
+E1,"Non-Medical Equipment (non DME)Durable equipment that can withstand repeated use and serves to augment or replace impaired functionality, environmental control and facilitate a patient's independent living.Start: 09/20/2009"
+E2,Psychiatric EmergencyEmergency services related to the diagnosis or treatment of mental disease.Start: 09/20/2009
+E3,Step Down UnitA hospital unit providing a level of care between intensive and routine.Start: 09/20/2009
+E4,Skilled Nursing Facility Head Level of CareServices directly related to care associated with severe brain injuries requiring a skilled level of care.Start: 09/20/2009
+E5,Skilled Nursing Facility Ventilator Level of CareServices directly related to care associated with ventilator dependent respiratory conditions requiring a skilled level of care.Start: 09/20/2009
+E6,Level of Care 1Skilled Care - Skilled Nursing Care in a regular hospital bedStart: 09/20/2009
+E7,"Level of Care 2Comprehensive Care - Skilled Nursing Care Level II includes attributes of prior level plus services such as Wound Care (Stage 3), Tracheotomy Care, etc.Start: 09/20/2009"
+E8,"Level of Care 3Complex Care - Skilled Nursing Care Level III include attributes of prior levels plus services such as Ventilator Care, Specialty Beds, Peritoneal Dialysis, etc.Start: 09/20/2009"
+E9,Level of Care 4Start: 09/20/2009
+E10,"RadiographsAn image or picture produced on a radiation-sensitive film emulsion by exposure to ionizing radiation direct through an area, region, or substance of interest, followed by chemical processing of the filmStart: 01/24/2010"
+E11,"Diagnostic ImagingThe use of radiographic, sonographic, and other technologies to create a graphic depiction of the body parts in question.Start: 01/24/2010"
+E12,Basic Restorative - DentalStart: 01/24/2010 | Stop: 07/01/2017
+E13,Major Restorative - DentalStart: 01/24/2010 | Stop: 07/01/2017
+E14,"Fixed ProsthodonticsThe branch of prosthodontics concerned with the replacement or restoration of teeth by artificial substitutes that are not readily removable such as fixed partial dentures, pontics and abutments.Start: 01/24/2010"
+E15,"Removable ProsthodonticsThe branch of prosthodontics concerned with the replacement or restoration of teeth by artificial substitutes that are readily removable such as a denture, partial denture and interim prosthesis.Start: 01/24/2010"
+E16,"Intraoral Images - Complete SeriesComplete set of images using radiographic, sonographic, and other technologies representing an image or set of images within the oral cavity.Start: 01/24/2010"
+E17,Oral EvaluationThe art and science of evaluation to make a clinical judgment or appraisal of a patient's dental health or condition.Start: 01/24/2010
+E18,"Dental ProphylaxisA series of procedures where plaque, calculus, and stain are removed from the teeth often referred to as ""prophy"" or teeth cleaning.Start: 01/24/2010"
+E19,"Panoramic ImagesA tomogram of the jaws, taken with a specialized machine designed to present a panoramic view of the full circumferential length of the jaws on a single film.Start: 01/24/2010"
+E20,SealantsA resinous material designed for application to the occlusal surfaces of posterior teeth to seal the surface irregularities and prevent the carious process.Start: 01/24/2010
+E21,Fluoride TreatmentsA separate process from dental prophylaxis of applying prescription strength fluoride product designed to prevent caries.Start: 01/24/2010
+E22,"Dental ImplantsA device, usually alloplastic, that is surgically inserted into or onto the oral tissue. To be used as a prosthodontic abutment, it should remain quiescent and purely secondary to local tissue physiology.Start: 01/24/2010"
+E23,Temporomandibular Joint DysfunctionServices related to the Impaired function of the temporomandibular articulation of the jaw.Start: 01/24/2010
+E24,"Retail Pharmacy Prescription DrugDispenses prescription drugs and provides professional pharmacy services, such as clinical pharmacy consulting respective to the dispensing function. The entity may be a retail/chain or independent pharmacy or any other entity which dispenses prescription drugs.Start: 06/06/2010 | Last Modified: 11/01/2017 | Stop: 11/01/2017"
+E25,"Long Term Care PharmacyLong term care pharmacy serve the residents of nursing homes, assisted care facilities, extended care facilities, retirement homes, or post acute care. These are considered ""closed door pharmacies""Start: 06/06/2010"
+E26,Comprehensive Medication Therapy Management ReviewA holistic review of medical care provided by pharmacists whose aim is to optimize drug therapy and improve therapeutic outcomes for patientsStart: 06/05/2011
+E27,"Targeted Medication Therapy Management ReviewA targeted medication therapy management (MTM) review is consultation with a patient about their medication therapy related to a specific diagnosis, disease state or medicationStart: 06/05/2011"
+E28,"Dietary/Nutritional ServicesNutrition and diet counseling such as: weight management, eating disorders, pregnancy, pediatric, food allergy, diabetes, celiac diseaseStart: 01/29/2012"
+E29,Technical Cardiac Rehabilitation Services ComponentStart: 09/30/2012 | Stop: 07/01/2016
+E30,Professional Cardiac Rehabilitation Services ComponentStart: 09/30/2012 | Stop: 07/01/2016
+E31,Professional Intensive Cardiac Rehabilitation Services ComponentStart: 09/30/2012 | Stop: 07/01/2016
+E32,Intensive Cardiac Rehabilitation - Technical ComponentStart: 06/02/2013 | Last Modified: 11/01/2016 | Stop: 05/01/2017
+E33,Intensive Cardiac RehabilitationA group of physical activities designed to help a patient recover from a cardiovascular eventStart: 06/02/2013
+E34,Pulmonary Rehabilitation - Technical ComponentStart: 06/02/2013 | Last Modified: 11/01/2016 | Stop: 05/01/2017
+E35,Pulmonary Rehabilitation - Professional ComponentStart: 06/02/2013 | Last Modified: 11/01/2016 | Stop: 05/01/2017
+E36,"Convenience CareA category of walk-in clinic located in retail stores, supermarkets and pharmacies that treat uncomplicated minor illnessesStart: 06/02/2013"
+E37,TelemedicineServices provided via telecommunication and/or information technology venues to provide clinical health services.Start: 07/01/2015Technical Note: Services performed that are related to telemedicine; not a place of service.
+E38,Pharmacist ServicesClinical services provided by a pharmacistStart: 07/01/2015
+E39,"Diabetic EducationPatient educational program designed to bring awareness of diabetes, what it takes to treat it, and the necessary changes that should be made to improve their lifestyle.Start: 03/01/2016"
+E40,Early InterventionServices related to treatment for babies or toddlers with developmental delays or disabilities.Start: 11/01/2016
+EA,"Preventive ServicesPreventive services such as check-ups, patient counseling and screenings to prevent illness, disease and other health-related problems.Start: 09/20/2009"
+EB,"Specialty PharmacySpecialty pharmacies are designed to efficiently deliver medications with specialized handling, storage, and distribution requirements. Specialty pharmacies are also designed to improve clinical and economic outcomes for patients with complex, often chronic and rare conditions, with close contact and management by clinicians.Start: 09/20/2009"
+EC,Durable Medical Equipment NewNew equipment needed for medical reasons to be used by a person that is ill or injured and is ordered by a health care provider for use in the home.Start: 09/20/2009
+ED,CAT ScanA multi-dimensional diagnostic image of a cross section of the body that is useful in diagnosing diseaseStart: 09/20/2009
+EE,OphthalmologyServices related to diagnosis and treatment of the eye and related structures including surgical services.Start: 09/20/2009
+EF,Contact LensesA thin lens placed directly on the surface of the eye. Contact Lenses are considered medical devicesStart: 09/20/2009
+EG,Fertility PreservationStart: 11/01/2022
+EH,Medically Tailored Meals (MTM)Meals approved by a medical professional or healthcare plan that reflect appropriate dietary therapy for the individualStart: 03/01/2023
+EJ,IV TherapyIntravenous (IV) therapy is a medical technique of administering fluids directly into a vein.Start: 03/01/2023
+EO,Applied Behavioral Analysis TherapyStart: 03/01/2017 | Stop: 07/01/2017
+F1,Medical CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+F2,Social Work CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+F3,Dental CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+F4,Hearing CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+F5,Prescription Drug CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+F6,Vision CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+F7,Orthodontia CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+F8,Mental Health CoverageThis code will be used by the payer on the 271 response to show coverage type. This code cannot be submitted with the 270 Inquiry.Start: 11/01/2015
+GF,Generic Prescription Drug - FormularyLists of generic drugs covered and published by the health plan/payer/processor/PBM to help physicians reach clinically and economically appropriate prescribing decisions for patients.Start: 09/20/2009
+GN,Generic Prescription Drug - Non-FormularyA generic drug that is not listed on the covered and published list of the health plan/payer/processor/PBM.Start: 09/20/2009
+GY,"AllergyServices for conditions caused by abnormal hypersensitivity of the immune system to medications, chemical or food substances, and/or environmental factors.Start: 09/20/2009"
+IC,Intensive CareContinuous and closely monitored health care services provided in a hospital to critically ill patients.Start: 09/20/2009
+MH,Mental HealthMental Health services provided by a physician or other healthcare providers who are trained and educated to perform services related to mental health and may be licensed or practice within the scope or licensure or training.Start: 09/20/2009
+NI,Neonatal Intensive CareContinuous and closely monitored health care services provided in a hospital to critically ill newborn/neonatal patients.Start: 09/20/2009
+ON,OncologyServices related to diagnosis and treatment of cancer provided by an Oncology providerStart: 09/20/2009
+PE,Positron Emission Tomography (PET) ScanA nuclear imaging examination which reveals molecular function and activity.Start: 09/20/2009
+PT,Physical TherapyServices and care related to evaluation and treatment of injury or disordersStart: 09/20/2009
+PU,PulmonaryServices related to the diagnosis and treatment of respiratory conditions.Start: 09/20/2009
+RN,RenalServices related to the diagnosis and treatment of kidney conditions.Start: 09/20/2009
+RT,Residential Psychiatric TreatmentPsychiatry services provided at a live-in facility to a person with emotional disorders who requires continuous medication and/or supervision or relief from environmental stressesStart: 09/20/2009
+SMH,Serious Mental HealthServices for disorders characterized by severe deficits and pervasive impairment in multiple areas of development.Start: 01/30/2011
+TC,Transitional CareServices related to the coordination and continuity of heath care during a movement from one health care setting to another or to home.Start: 09/20/2009
+TN,Transitional Nursery CareServices related to the coordination and continuity of heath care for a newborn during a movement from one health care setting to another or to home.Start: 09/20/2009
+UC,Urgent CareMedical services and supplies provided by physicians or other healthcare providers for the treatment of an urgent medical condition or injury which requires medical attention.Start: 09/20/2009

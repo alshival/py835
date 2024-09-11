@@ -1,0 +1,108 @@
+Code,Description
+ADM,Administrative Fees used for a debt owed by the payee. This is a program-level code only and no enrollment group (policy) level information will be provided with this code. The Administrative Fee is $15. Negative Amounts Only
+APTC,Advance Payment of Premium Tax Credit. RMR04 will be positive.
+APTCADJ,Advance Payment of Premium Tax Credit Adjustment. RMR04 will be positive or negative.
+APTCMADJ,APTC Manual Adjustment. Used to show APTC manual adjustment when enrollment group level information is not applicable. RMR04 will be positive or negative and may be reversed in the future. This is a program-level code only and no enrollment group (policy) level information will be provided with this code.
+BAL,"When an AR invoice is split between multiple HIX 820 reports, this adjustment balances the reports.  Negative Amounts & Positive Amounts"
+CSR,Advance Payment of Cost Sharing Reduction. RMR04 will be positive.
+CSRADJ,Advance Payment of Cost Sharing Reduction Adjustment. RMR04 will be positive or negative.
+CSRMADJ,CSR Manual Adjustment. Used to show CSR manual adjustment when enrollment group level information is not provided. RMR04 will be positive or negative and may be reversed in the future. This is a program-level code only and no enrollment group (policy) level information will be provided with this code.
+CSRN,Cost Sharing Reduction Reconciliation. Negative Amounts & Positive Amounts
+CSRNADJ,Cost Sharing Reduction Reconciliation Adjustment. RMR04 will be positive or negative.
+DDVC,"Default Data Validation Charge or Allocation Payment. If DDVC is the Payment Type Code, a corresponding Report Type Code of DDVCRPT will also be included. (Invoice Number and specific detail may be provided in the Document Control Number in the payment reports effective July 2017). Negative Amounts & Positive Amounts"
+DEBTADJ,"Payee's debt amount covered by an affiliate's payment. RMR04 will be positive. This is a program-level code only and no enrollment group (policy) level information will be provided with this code. When used to report that a prior debt was covered, RMR04 with the payment type code of BAL will also be used."
+DEPENDENTPREM,Dependent responsible premium amount. RMR04 will be positive.
+DEPENDENTPREMADJCANCEL,Dependent premium amount adjustment due to cancellation. RMR04 will positive or negative
+DEPENDENTPREMADJNSF,Dependent responsible premium amount due to non-sufficient funds. RMR04 will be positive or negative.
+DEPENDENTPREMADJTERMINATE,Dependent responsible premium amount due to the termination of a policy. RMR04 will be positive or negative.
+EMPLOYEEPREM,Employee responsible premium amount. RMR04 will be positive.
+EMPLOYEEPREMADJCANCEL,Employee responsible premium amount adjustment due to cancellation. RMR04 will be positive or negative
+EMPLOYEEPREMADJNSF,Employee responsible premium amount adjustment due to non-sufficient funds. RMR04 will be positive or negative.
+EMPLOYEEPREMADJTERMINATE,Employee responsible premium amount adjustment due to the termination of a policy. RMR04 will be positive or negative.
+EMPLOYERPREM,Employer responsible premium amount. RMR04 will be positive.
+EMPLOYERPREMADJCANCEL,Employer responsible premium amount adjustment due to cancellation.  RMR04 will be positive or negative
+EMPLOYERPREMADJNSF,Employer responsible premium amount adjustment due to non-sufficient funds. RMR04 will be positive or negative.
+EMPLOYERPREMADJTERMINATE,Employer responsible premium amount adjustment due to the termination of a policy. RMR04 will be positive or negative.
+EXTLOAN,Payment Offsets For Co-op Loan. Negative Amounts Only
+HCRPC,High Cost Risk Pool Contribution Amount. Negative Amounts & Positive Amounts
+HCRPP,High Cost Risk Pool Payment Amount. Negative Amounts & Positive Amounts
+HCRPPYREF,High Cost Risk Pool Refund For Prior Fiscal Years. Positive Amounts Only
+HCRPADMIN,High Cost Risk Pool Refund of Admin Charge. Positive Amounts Only
+HCRPINT,High Cost Risk Pool Refund of Interest Charge. Positive Amounts Only
+INT,Interest charges for a debt owed by the payee. This is a program-level code only and no enrollment group (policy) level information will be provided with this code. The Secretary of Treasury certifies and updates an interest rate on a quarterly basis. Negative Amounts Only
+INVOICE,Used to show a total amount that will be billed or otherwise collected. Only used when BPR02 would otherwise be negative. This is a program-level code only and no enrollment group (policy) level information will be provided with this code. Negative Amounts Only
+PEN,Penalty charges for a debt owed by the payee. The Treasury will add additional administrative fees of up to 30 percent and accrue the required penalty charge of 6 percent per year on any amount outstanding. Interest will continue to accrue. This is a program-level code only and no enrollment group (policy) level information will be provided with this code. Negative Amounts Only
+RA,"Risk Adjustment Charge or Payment. If RA is the Payment Type Code, a corresponding Report Type Code of RARPT will also be included. (Invoice Number and specific detail may be provided in the Document Control Number in the payment reports effective July 2017).
+Negative Amounts & Positive Amounts"
+RAADJ,Risk Adjustment Payment or Charge Adjustment. RMR04 will be positive or negative.
+RAAR,Risk Adjustment Administration Fee Refund. A Risk Adjustment Admin Fee is only charged if an Issuer does not pay their RA Charges within 30 days. Positive Amounts Only
+RACR,Risk Adjustment Refund For Prior Fiscal Years. Positive Amounts Only
+RAD,Risk Adjustment Default Charge or Allocation Payment. (Invoice Number and specific detail may be provided in the Document Control Number in the payment reports effective July 2017). Negative Amounts & Positive Amounts
+RADV,"Risk Adjustment Data Validation Adjustment Charge or Payment. If RADV is the Payment Type Code, a corresponding Report Type Code of RADVRPT will also be included. (Invoice Number and specific detail may be provided in the Document Control Number in the payment reports effective July 2017).
+ Negative Amounts & Positive Amounts"
+RAIR,Risk Adjustment Interest Charge Refund. A Risk Adjustment Interest Charge is only assessed if an Issuer does not pay their RA Charges within 30 days. Negative Amounts & Positive Amounts
+RAREF,Risk Adjustment Refund For Current Fiscal Year. Positive Amounts Only
+RAUF,Risk Adjustment User Fee. Negative Amounts Only
+RAUFADJ,Risk Adjustment User Fee Adjustment. RMR04 will be positive or negative.
+RAUFAR,Risk Adjustment User Fee Refund of admin charge. Positive Amounts Only
+RAUFIR,Risk Adjustment User Fee Refund of interest charge. Positive Amounts Only
+RAUFR,Risk Adjustment User Fee Refund. Positive Amounts Only
+RAUFR2PY,Risk Adjustment User Fee Refund. Positive Amounts Only
+RAUFREF,Risk Adjustment User Fee refund for current fiscal year. Positive Amounts Only
+RAUFRN,Risk Adjustment User Fee Refund. Positive Amounts Only
+RC,Risk Corridor Program payment or charge amount. Negative Amounts & Positive Amounts
+RC15,Risk Corridors Charges. Negative Amounts Only
+RCADJ,Risk Corridor Adjustment. RMR04 will be positive or negative.
+RCAR,Risk Corridors Refund Of Admin Charge. Positive Amounts Only
+RCCR15,Risk Corridors Refund For Prior Fiscal Years. Positive Amounts Only
+RCCR16,Risk Corridors Refund For Current Fiscal Year. Positive Amounts Only
+RCIR,Risk Corridors Refund Of Interest Charge. Positive Amounts Only
+RCREF,Risk Corridors Refund For Current Fiscal Year. Positive Amounts Only
+REDUCED,Payment reduced to cover a debt owed by the payee. RMR04 will be negative. This is a program-level code only and no enrollment group (policy) level information will be provided with this code. Negative Amounts Only
+RIC,Reinsurance Contribution Amount. Negative Amounts & Positive Amounts
+RICADJ,Reinsurance Contribution Adjustment. RMR04 will be positive or negative.
+RICAR,Reinsurance Contribution Refund Of Admin Charge. Positive Amounts Only
+RICIR,Reinsurance Contribution Refund Of Interest Charge. Positive Amounts Only
+RICR,Reinsurance Contribution Refund For Prior Fiscal Years. Positive Amounts Only
+RICREF,Reinsurance Contribution Refund For Current Fiscal Year. Positive Amounts Only
+RIP,Reinsurance Payment Amount. Negative Amounts & Positive Amounts
+RIPADJ,Reinsurance Payment Adjustment. RMR04 will be positive or negative.
+SHOPUF,Federally-facilitated Marketplace User Fee for SHOP plans. (SHOP HIX 820 Trace Number may be provided in the Document Control Number in the payment reports). Negative Amounts & Positive Amounts
+SHOPUFADJ,Federally-facilitated Marketplace User Fee Adjustment for SHOP plans. RMR04 will be positive or negative. This code will not be used.
+SHOPUFMADJ,Federally-facilitated Marketplace User Fee Manual Adjustment for SHOP Plans.
+UF,Federally-facilitated Marketplace User Fee. RMR04 will be negative.
+UFADJ,Federally-facilitated Marketplace User Fee Adjustment. RMR04 will be positive or negative.
+UFAR,FFM User Fee refund of admin charges. Positive Amounts Only
+UFIR,FFM User Fee Refund of interest charges. Positive Amounts Only
+UFMADJ,Federally-facilitated Marketplace User Fee Manual Adjustment. Used to show user fee manual adjustment when enrollment group level information is not provided. RMR04 will be positive or negative and may be reversed in the future. This is a program-level code only and no enrollment group (policy) level information will be provided with this code.
+UFR,Federally-facilitated Marketplace User Fee Adjustment related to providing contraceptive care coverage. This is a program-level code only and no enrollment group (policy) level information will be provided with this code. Positive Amounts Only
+UFR2PY,FFM User Fee Refund. Positive Amounts Only
+UFRP,FFM User Fee Refund. Positive Amounts Only
+UFRPN,FFM User Fee Refund. Positive Amounts Only
+COMM,Any commissions withheld by the Exchange. RMR04 will be negative.
+COMMADJ,Any commissions adjustment. RMR04 will be positive or negative.
+DEDUCT,Deductible amount due to the Payer. RMR04 will be positive or negative.
+INTPREM,Initial premium payment received by the Exchange from the customer. This amount will be the gross premium received from the customer. RMR04 will be positive.
+MDCAID,State Medicaid Subsidy. RMR04 will be positive.
+MDCAIDADJ,State Medicaid Subsidy Adjustment. RMR04 will be positive or negative.
+MISC,"Used to indicate miscellaneous amounts (i.e. write-offs, etc.) RMR04 will be positive or negative."
+MRF,"Marketplace-Related Fee. This is the amount that is being paid not attributable to an individual coverage but at a plan or carrier level. If negative, the fee was withheld from carrier payments. If positive, the fee was paid to the carrier. RMR04 will be positive or negative."
+MRFADJ,Adjustments to a previously sent MRF. The MRFADJ is not attributable to an individual coverage level but at a plan or carrier level. RMR04 will be positive or negative.
+NONPAYADJ,Code use to indicate an adjustment is being made due to a NSF or stop payment. Amount will always be negative.
+OPMUF,OPM Multi-State Plan user fee. RMR04 will be negative.
+OPMUFADJ,OPM Multi-State Plan user fee manual adjustment. Used to show user fee manual adjustment when enrollment group level information is not provided. RMR04 will be positive or negative and may be reversed in the future.
+PREM,Premium payment amount received for the enrollment group for coverage (excluding APTC and Exchange-Related Fees). RMR04 will be positive.
+PREMADJ,Adjustments to premium payment amount received for the enrollment group for coverage (excluding APTC and Marketplace-Related Fees). RMR04 will be positive or negative.
+PREMALL,Premium payment amount received for the enrollment group for coverage (including APTC and Marketplace-Related Fees). RMR04 will be positive.
+PREMALLADJ,Adjustments to premium payment amount received for the enrollment group for coverage (including APTC and Marketplace-Related Fees). RMR04 will be positive or negative.
+REFUND,Total refunded amount sent back to the customer. RMR04 will be negative.
+RETURN,Total returned payment (i.e. returned due to non-sufficient funds). RMR04 will be negative.
+SBMUF,State Based Marketplace User Fee. RMR04 will be negative.
+SBMUFADJ,State Based Marketplace User Fee Adjustment. RMR04 will be positive or negative.
+SMAND,State Mandate Benefit Subsidy. RMR04 will be positive.
+SMANDADJ,State Mandate Benefit Subsidy Adjustment. RMR04 will be positive or negative.
+TPP,Money paid by a third party payer as a subsidy to Subscriber coverage in the individual market.
+TPPADJ,Adjustments to Money paid by a third party payer as a subsidy to Subscriber coverage in the individual market.
+TRIBE,Money paid by a registered Tribe as a subsidy to Subscriber coverage in the individual market.
+TRIBEADJ,Adjustments to Money paid by a registered Tribe as a subsidy to Subscriber coverage in the individual market.
+WRITEOFF,Write off amount

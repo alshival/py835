@@ -1,0 +1,43 @@
+Code,Description
+01,Card interchange fee amount
+02,Advanced or accelerated payment recoupment amount
+03,Claim transmission fee amount
+04,Real-time adjudication resulting in a payment that will follow separately.
+05,Penalty amount withheld due to reports that were not filed
+06,Penalty amount withheld due to reports that were filed incorrectly
+07,Non-Internal Revenue Service third-party  withholding amount unrelated to a federal payment levy program
+08,Penalty Withholding for Bankruptcy/Termination
+50,"The amount of the late charge, late claim filing penalty, or  Medicare late cost report penalty."
+51,Late filing interest penalty assessment amount
+72,Provider refund amountThis adjustment acknowledges a refund received from a provider for previous overpayment.
+90,Early payment allowance amount
+AH,Claim transmission fee amountThis code is used for transmission fees that are not specific to or dependent upon individual claims.
+AM,Loan repayment amount
+AP,Advanced or accelerated payment amount
+B2,Rebate amountApplies when a provider has remitted an over payment to a health plan in excess of the amount requested by the health plan.
+B3,Recovery amountThis represents the amount received from the provider for an overpayment based on payments from other payers. This code is not used for other provider refund adjustment amounts.
+BD,Bad debt amount
+BN,Bonus amount
+CR,Capitation interest amount
+CS,"Adjustment amount, detailed information is provided separately to explain the adjustment."
+CT,Capitation payment amount
+E3,Withholding amount
+FB,Non-claim related balance forward amount
+FC,Allocation of prepaid funds against which deductions are drawn as services are provided.
+FR,Claim-related balance forward amount
+HM,Hemophilia clotting factor add-on payment amount
+IP,Incentive payment amount
+IR,Internal Revenue Service 1099 withholding amount
+IS,Lump sum based on an interim rate
+J1,Amount not reimbursed based on a demonstration program or other limitation that prevents issuance of payment.
+L3,Penalty amount
+L6,Interest amount
+LE,Internal Revenue Service non-1099 withholding amount
+OB,Affiliated provider(s) offset amount
+PI,Periodic Interim Payment (PIP) lump sum amount
+PL,Final payment or settlement amount
+RA,Retroactive adjustment amount
+SL,Student loan garnishment amount
+TL,Third party liability determination amount
+WO,Overpayment recovery amount
+WU,Non-Internal Revenue Service withholding amount related to a federal payment levy program

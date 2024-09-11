@@ -1,0 +1,74 @@
+Code,Description
+01,Price Authorization Expired
+02,Price authorization no longer required
+03,Product not on the price authorization
+04,Authorized Quantity Exceeded
+05,Special Cost Incorrect
+06,No Credit Allowed
+07,Administrative Cancellation
+08,Unit resale higher than authorized
+09,Out of Network
+0A,Testing not Included
+0B,Request Forwarded To and Decision Response Forthcoming From an External Review Organization
+0C,Authorization/Access Restrictions
+0D,Requires PCP authorization
+0E,Provider is Not Primary Care Physician
+0F,Not Medically Necessary
+0G,Level of Care Not Appropriate
+0H,Certification Not Required for this Service
+0J,Certification Responsibility of External Review Organization
+0K,Primary Care Service
+0L,Exceeds Plan Maximums
+0M,Non-covered Service
+0N,No Prior Approval
+0P,Requested Information Not Received
+0Q,Duplicate Request
+0R,Service Inconsistent with Diagnosis
+0S,Pre-existing Condition
+0T,Experimental Service or Procedure
+0U,Additional Patient Information required
+0V,Requires Medical Review
+0W,Disposition pending review
+0X,Service Inconsistent with Provider Type
+0Y,Service inconsistent with Patient's Age
+0Z,Service inconsistent with Patient's Gender
+10,"Product/service/procedure delivery pattern (e.g., units, days, visits, weeks, hours, months)"
+11,Pricing
+12,Patient is restricted to specific provider
+13,Service authorized for another provider
+14,Plan/contractual guidelines not followed
+15,Plan/contractual geographic restriction
+16,Inappropriate facility type
+17,Time limits not met
+18,Notification received
+19,Cosmetic
+20,Once in a lifetime restriction applies
+21,Transport Request Denied
+22,Ambulance Certification Segment information doesn't correspond to Transport Address Segment
+23,Mileage cannot be computed based on data submitted
+24,Computed mileage is inconsistent with transport information or service units submitted
+25,Services were not considered due to other errors in the request.
+26,Missing Provider Role
+27,Patient is currently in a Health Insurance Exchange premium payment grace period -- first month. Usage: Use only for Individual Market Qualified Health Plans.
+28,Patient is currently in a Health Insurance Exchange premium payment grace period -- second month. Usage: Use only for Individual Market Qualified Health Plans.
+29,Patient is currently in a Health Insurance Exchange premium payment grace period -- third month. Usage: Use only for Individual Market Qualified Health Plans.
+30,Initial Utilization Review In Progress
+31,Escalated Utilization Review in Progress
+32,"Excluded benefit, a service which is specifically excluded from the benefit plan."
+33,Appeal Denied
+34,Payer-initiated Void
+35,The documentation submitted is not legible.
+36,Signed documentation is required to support medical necessity.
+37,A signed Order or Intent-to-Order is required.
+38,A physician certification statement is required.
+39,An order that supports this service is required.
+40,The supporting documentation does not match the patient identified in the preauthorization request.
+41,The supporting documentation does not support the number of units requested.
+42,A nutritional status assessment is required.
+43,Initial and repeated wound measurements are required.
+44,Documentation of conservative treatment failure is required.
+45,Documentation of a diabetes diagnosis is required.
+46,Documentation that treatment is an adjunct to conventional therapy is required.
+47,Documentation of measurable signs of improvement is required.
+48,Documentation of a diabetic wound classification is required.
+49,Patient was not admitted within the authorized timeframe.

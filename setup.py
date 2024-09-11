@@ -6,7 +6,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="py835",  # Your package name
-    version="0.1.1",  # Version of the package
+    version="0.1.2",  # Version of the package
     packages=find_packages(),  # Automatically find and include your packages
     install_requires=requirements, # Install dependencies from requirements.txt
     author="DHR Health - Data Team",

@@ -1,0 +1,369 @@
+Code,Description
+E001,Missing/Invalid submitter identifier
+W001,Missing/Invalid submitter identifier
+E002,Missing/Invalid receiver identifier
+W002,Missing/Invalid receiver identifier
+E003,Missing/Invalid member identifier
+W003,Missing/Invalid member identifier
+E004,Missing/Invalid subscriber identifier
+W004,Missing/Invalid subscriber identifier
+E005,Missing/Invalid patient identifier
+W005,Missing/Invalid patient identifier
+E006,Missing/Invalid plan sponsor identifier
+W006,Missing/Invalid plan sponsor identifier
+E007,Missing/invalid payee identifier
+W007,Missing/invalid payee identifier
+E008,Missing/Invalid TPA/broker identifier
+W008,Missing/Invalid TPA/broker identifier
+E009,Missing/Invalid premium receiver identifier
+W009,Missing/Invalid premium receiver identifier
+E010,Missing/Invalid premium payer identifier
+W010,Missing/Invalid premium payer identifier
+E011,Missing/Invalid payer identifier
+W011,Missing/Invalid payer identifier
+E012,Missing/Invalid billing provider identifier
+W012,Missing/Invalid billing provider identifier
+E013,Missing/Invalid pay to provider identifier
+W013,Missing/Invalid pay to provider identifier
+E014,Missing/Invalid rendering provider identifier
+W014,Missing/Invalid rendering provider identifier
+E015,Missing/Invalid supervising provider identifier
+W015,Missing/Invalid supervising provider identifier
+E016,Missing/Invalid attending provider identifier
+W016,Missing/Invalid attending provider identifier
+E017,Missing/Invalid other provider identifier
+W017,Missing/Invalid other provider identifier
+E018,Missing/Invalid operating provider identifier
+W018,Missing/Invalid operating provider identifier
+E019,Missing/Invalid referring provider identifier
+W019,Missing/Invalid referring provider identifier
+E020,Missing/Invalid purchased service provider identifier
+W020,Missing/Invalid purchased service provider identifier
+E021,Missing/Invalid service facility identifier
+W021,Missing/Invalid service facility identifier
+E022,Missing/Invalid ordering provider identifier
+W022,Missing/Invalid ordering provider identifier
+E023,Missing/Invalid assistant surgeon identifier
+W023,Missing/Invalid assistant surgeon identifier
+E024,Amount/Quantity out of balance
+W024,Amount/Quantity out of balance
+E025,Duplicate
+W025,Duplicate
+E026,Billing date predates service date
+W026,Billing date predates service date
+E027,Business application currently not available
+W027,Business application currently not available
+E028,Sender not authorized for this transaction
+W028,Sender not authorized for this transaction
+E029,Number of errors exceeds permitted threshold
+W029,Number of errors exceeds permitted threshold
+E030,Required loop missing
+W030,Required loop missing
+E031,Required segment missing
+W031,Required segment missing
+E032,Required element missing
+W032,Required element missing
+E033,Situational required loop is missing
+W033,Situational required loop is missing
+E034,Situational required segment is missing
+W034,Situational required segment is missing
+E035,Situational required element is missing
+W035,Situational required element is missing
+E036,Data too long
+W036,Data too long
+E037,Data too short
+W037,Data too short
+E038,Invalid external code value
+W038,Invalid external code value
+E039,Data value out of sequence
+W039,Data value out of sequence
+E040,"""Not Used"" data element present"
+W040,"""Not Used"" data element present"
+E041,Too many sub-elements in composite
+W041,Too many sub-elements in composite
+E042,Unexpected segment
+W042,Unexpected segment
+E043,Missing data
+W043,Missing data
+E044,Out of range
+W044,Out of range
+E045,Invalid date
+W045,Invalid date
+E046,Not matching
+W046,Not matching
+E047,Invalid combination
+W047,Invalid combination
+E048,Customer identification number does not exist
+W048,Customer identification number does not exist
+E049,Duplicate batch
+W049,Duplicate batch
+E050,Incorrect data
+W050,Incorrect data
+E051,Incorrect date
+W051,Incorrect date
+E052,Duplicate transmission
+W052,Duplicate transmission
+E053,Invalid claim amount
+W053,Invalid claim amount
+E054,Invalid identification code
+W054,Invalid identification code
+E055,Missing or invalid issuer identification
+W055,Missing or invalid issuer identification
+E056,Missing or invalid item quantity
+W056,Missing or invalid item quantity
+E057,Missing or invalid item identification
+W057,Missing or invalid item identification
+E058,Missing or unauthorized transaction type code
+W058,Missing or unauthorized transaction type code
+E059,Unknown claim number
+W059,Unknown claim number
+E060,Bin segment contentes not in MIME format
+W060,Bin segment contents not in MIME format
+E061,Missing/invalid MIME header
+W061,Missing/Invalid MIME header
+E062,Missing/Invalid MIME boundary
+W062,Missing/Invalid MIME boundary
+E063,Missing/Invalid MIME transfer encoding
+W063,Missing/Invalid MIME transfer encoding
+E064,Missing/Invalid MIME content type
+W064,Missing/Invalid MIME content type
+E065,Missing/Invalid MIME content disposition (filename)
+W065,Missing/Invalid MIME content disposition (filename)
+E066,Missing/Invalid file name extension
+W066,Missing/Invalid file name extension
+E067,Invalid MIME base64 encoding
+W067,Invalid MIME base64 encoding
+E068,Invalid MIME quoted-printable encoding
+W068,Invalid MIME quoted-printable encoding
+E069,Missing/Invalid MIME line terminator (should be CR+LF)
+W069,Missing/Invalid MIME line terminator (should be CR+LF)
+E070,"Missing/Invalid ""end of MIME"" headers"
+W070,"Missing/Invalid ""end of MIME"" headers"
+E071,Missing/Invalid CDA in first MIME body parts
+W071,Missing/Invalid CDA in first MIME body parts
+E072,Missing/Invalid XML tag
+W072,Missing/Invalid XML tag
+E073,Unrecoverable XML error
+W073,Unrecoverable XML error
+E074,Invalid Data format for HL7 data type
+W074,Invalid Data format for HL7 data type
+E075,Missing/Invalid required LOINC answer part(s) in the CDA
+W075,Missing/Invalid required LOINC answer part(s) in the CDA
+E076,Missing/Invalid Provider information in the CDA
+W076,Missing/Invalid Provider information in the CDA
+E077,Missing/Invalid Patient information in the CDA
+W077,Missing/Invalid Patient information in the CDA
+E078,Missing/Invalid Attachment Control information in the CDA
+W078,Missing/Invalid Attachment Control information in the CDA
+E079,Missing/Invalid LOINC
+W079,Missing/Invalid LOINC
+E080,Missing/Invalid LOINC Modifier
+W080,Missing/Invalid LOINC Modifier
+E081,Missing/Invalid LOINC code for this attachment type
+W081,Missing/Invalid LOINC code for this attachment type
+E082,Missing/Invalid LOINC Modifier for this attachment type
+W082,Missing/Invalid LOINC Modifier for this attachment type
+E083,Situational prohibited element is present
+W083,Situational prohibited element is present
+E084,Duplicate qualifier value in repeated segment within a single loop
+W084,Duplicate qualifier value in repeated segment within a single loop
+E085,Situational required composite element is missing
+W085,Situational required composite element is missing
+E086,Situational required repeating element is missing
+W086,Situational required repeating element is missing
+E087,Situational prohibited loop is present
+W087,Situational prohibited loop is present
+E088,Situational prohibited segment is present
+W088,Situational prohibited segment is present
+E089,Situational prohibited composite element is present
+W089,Situational prohibited composite element is present
+E090,Situational prohibited repeating element is present
+W090,Situational prohibited repeating element is present
+E091,Transaction successfully received but not processed as applicable business function not performed.
+W091,Transaction successfully received but not processed as applicable business function not performed.
+E092,Missing/Invalid required SNOMED CT answer part(s) in the CDA
+W092,Missing/Invalid required SNOMED CT answer part(s) in the CDA
+E093,Matching Policy Information/Document not found.
+W093,Matching Policy Information/Document not found.
+E094,Financial Assistance not permitted across multiple marketplaces - Double Dip Check Edit Identified.
+W094,Financial Assistance not permitted across multiple marketplaces - Double Dip Check Edit Identified.
+E095,Business Process transaction out of sequence.
+W095,Business Process transaction out of sequence.
+E096,Advanced Premium Tax Credit is more than Total Premium.
+W096,Advanced Premium Tax Credit is more than Total Premium.
+E097,"Marketplace, Off Market Variant."
+W097,"Marketplace, Off Market Variant."
+E098,Maintenance Type Code
+W098,Maintenance Type Code
+E099,Maintenance Reason Code
+W099,Maintenance Reason Code
+E100,Additional Maintenance Reason Code
+W100,Additional Maintenance Reason Code
+E101,Enrollment Group member(s) count on transaction does not match Enrollment Group member(s) count found on file of record
+W101,Enrollment Group member(s) count on transaction does not match Enrollment Group member(s) count found on file of record
+E102,Effective
+W102,Effective
+E103,Advanced Payment for Tax Credit (APTC)
+W103,Advanced Payment for Tax Credit (APTC)
+E104,Total Individual Responsibility Amount
+W104,Total Individual Responsibility Amount
+E105,Other Payment Amount 1
+W105,Other Payment Amount 1
+E106,Other Payment Amount 2
+W106,Other Payment Amount 2
+E107,Total Premium Amount
+W107,Total Premium Amount
+E108,Individual Premium Amount
+W108,Individual Premium Amount
+E109,Total Employer Responsibility Amount
+W109,Total Employer Responsibility Amount
+E110,Financial Date Precedes Premium Date
+W110,Financial Date Precedes Premium Date
+E111,Exceeds Unique
+W111,Exceeds Unique
+E112,Exceeds Allowable Changes
+W112,Exceeds Allowable Changes
+E113,Cost Sharing Reduction (CSR) Date precedes the Total Premium Amount Effective
+W113,Cost Sharing Reduction (CSR) Date precedes the Total Premium Amount Effective
+E114,Renewal Transaction cannot be processed as it is outside of allocated time period
+W114,Renewal Transaction cannot be processed as it is outside of allocated time period
+E115,Financial Amounts Unchanged by newly reported data
+W115,Financial Amounts Unchanged by newly reported data
+E116,Effective
+W116,Effective
+E117,Duplicate Payment of Advanced Premium Tax Credit
+W117,Duplicate Payment of Advanced Premium Tax Credit
+E118,Duplicate Payment of Cost Sharing Reduction
+W118,Duplicate Payment of Cost Sharing Reduction
+E119,Duplicate Payment of User Fee
+W119,Duplicate Payment of User Fee
+E120,Missing Payment of Advanced Premium Tax Credit
+W120,Missing Payment of Advanced Premium Tax Credit
+E121,Missing Payment of Cost Sharing Reduction
+W121,Missing Payment of Cost Sharing Reduction
+E122,Missing Payment of User Fee
+W122,Missing Payment of User Fee
+E123,Advanced Premium Tax Credit (APTC) Payment Mismatch - The Federally Facilitated Marketplace (FFM) or State Based Marketplace (SBM) APTC amount and the Health Plan APTC amount are equal but do not match the APTC payment amount received
+W123,Advanced Premium Tax Credit (APTC) Payment Mismatch - The Federally Facilitated Marketplace (FFM) or State Based Marketplace (SBM) APTC amount and the Health Plan APTC amount are equal but do not match the APTC payment amount received
+E124,Cost Shared Reduction (CSR) Payment Mismatch - The Federally Facilitated Marketplace (FFM) or State Based Marketplace (SBM) CSR amount and the Health Plan CSR amount are equal but do not match the CSR payment amount received
+W124,Cost Shared Reduction (CSR) Payment Mismatch - The Federally Facilitated Marketplace (FFM) or State Based Marketplace (SBM) CSR amount and the Health Plan CSR amount are equal but do not match the CSR payment amount received
+E125,User Fee Payment Mismatch - The calculated Federally Facilitated Marketplace (FFM) User Fee amount and the calculated Health Plan User Fee amount are equal but do not match the User Fee payment amount received
+W125,User Fee Payment Mismatch - The calculated Federally Facilitated Marketplace (FFM) User Fee amount and the calculated Health Plan User Fee amount are equal but do not match the User Fee payment amount received
+E126,Effectuation Transaction cannot be processed as it is outside of allocated time period
+W126,Effectuation Transaction cannot be processed as it is outside of allocated time period
+E127,Cancel Transaction cannot be processed as it is outside of allocated time period
+W127,Cancel Transaction cannot be processed as it is outside of allocated time period
+E128,Termination Transaction cannot be processed as it is outside of allocated time period
+W128,Termination Transaction cannot be processed as it is outside of allocated time period
+E129,Maintenance Transaction cannot be processed as it is outside of allocated time period
+W129,Maintenance Transaction cannot be processed as it is outside of allocated time period
+E130,Policy level cancel/terminations shall not contain health coverage information
+W130,Policy level cancel/terminations shall not contain health coverage information
+E131,Dependent/Member not included in current coverage
+W131,Dependent/Member not included in current coverage
+E132,The data in the transaction does not match the exchange/marketplace type
+W132,The data in the transaction does not match the exchange/marketplace type
+E133,Policy Cancelled - cannot be processed
+W133,Policy Cancelled - cannot be processed
+E134,Policy Non-Effectuated - cannot be processed
+W134,Policy Non-Effectuated - cannot be processed
+E135,Policy ID
+W135,Policy ID
+E136,Subscriber ID
+W136,Subscriber ID
+E137,Member ID
+W137,Member ID
+E138,No Longer Eligible (NLE)
+W138,No Longer Eligible (NLE)
+E139,Exchange Assigned
+W139,Exchange Assigned
+E140,Issuer Assigned
+W140,Issuer Assigned
+E141,Issuer Prior Assigned
+W141,Issuer Prior Assigned
+E142,Action results already match current information on file
+W142,Action results already match current information on file
+E143,Action results do not match current information on file
+W143,Action results do not match current information on file
+E144,Cancellation Transaction
+W144,Cancellation Transaction
+E145,Initial Enrollment Transaction
+W145,Initial Enrollment Transaction
+E146,Maintenance Transaction
+W146,Maintenance Transaction
+E147,Reinstatement Transaction
+W147,Reinstatement Transaction
+E148,Termination Transaction
+W148,Termination Transaction
+E149,Email Address
+W149,Email Address
+E150,Mailing Address
+W150,Mailing Address
+E151,Telephone Number
+W151,Telephone Number
+E152,Consumer executed voluntary withdrawal of coverage
+W152,Consumer executed voluntary withdrawal of coverage
+E153,Unable to be processed causing a gap or overlap in coverage dates
+W153,Unable to be processed causing a gap or overlap in coverage dates
+E154,Invoke the Enrollment Resolution and Reconciliation (ER&R) manual process
+W154,Invoke the Enrollment Resolution and Reconciliation (ER&R) manual process
+E155,Marketplace Coverage in Effect
+W155,Marketplace Coverage in Effect
+E156,Reinstatement transaction cannot be processed as it is outside of the allocated time period
+W156,Reinstatement transaction cannot be processed as it is outside of the allocated time period
+E157,Coverage
+W157,Coverage
+E158,Coverage End Date
+W158,Coverage End Date
+E159,Dependent/Member shall not be included in Policy Level
+W159,Dependent/Member shall not be included in Policy Level
+E160,One day coverage
+W160,One day coverage
+E161,Invalid
+W161,Invalid
+E162,Eligibility Begin Date
+W162,Eligibility Begin Date
+E163,Associated submission not found
+W163,Associated submission not found
+E164,Exceeds Receiver Allowed Occurrences
+W164,Exceeds Receiver Allowed Occurrences
+E165,HL7 US Realm Header Legal Authenticator data is missing
+W165,HL7 US Realm Header Legal Authenticator data is missing
+E166,HL7 US Realm Header Author data is missing
+W166,HL7 US Realm Header Author data is missing
+E167,HL7 US Realm Header SetID data is missing
+W167,HL7 US Realm Header SetID data is missing
+E168,HL7 US Realm Header VersionNumber data is missing
+W168,HL7 US Realm Header VersionNumber data is missing
+E169,HL7 C-CDA Structured document sections name data is missing
+W169,HL7 C-CDA Structured document sections name data is missing
+E170,HL7 C-CDA Structured document sections title data is missing
+W170,HL7 C-CDA Structured document sections title data is missing
+E171,HL7 C-CDA Structured document narrative block (text) data is missing
+W171,HL7 C-CDA Structured document narrative block (text) data is missing
+E172,HL7 C-CDA Unstructured document LOINC Code is missing
+W172,HL7 C-CDA Unstructured document LOINC Code is missing
+E173,HL7 C-CDA Unstructured document contained a reference to a URL or URI
+W173,HL7 C-CDA Unstructured document contained a reference to a URL or URI
+E174,HL7 C-CDA Unstructured document @mediaType (MIME type) is missing
+W174,HL7 C-CDA Unstructured document @mediaType (MIME type) is missing
+E175,HL7 C-CDA Unstructured document included more than 1 @mediaType (MIME type)
+W175,HL7 C-CDA Unstructured document included more than 1 @mediaType (MIME type)
+E176,HL7 C-CDA Unstructured document Base64 encoding does not meet the RFC 4648 requirements
+W176,HL7 C-CDA Unstructured document Base64 encoding does not meet the RFC 4648 requirements
+E177,HL7 C-CDA Unstructured document compression does not meet the RFC 1951 requirements
+W177,HL7 C-CDA Unstructured document compression does not meet the RFC 1951 requirements
+E178,HL7 C-CDA LOINC code does not match the LOINC code in the request
+W178,HL7 C-CDA LOINC code does not match the LOINC code in the request
+E179,HL7 Attachment Control Number is missing
+W179,HL7 Attachment Control Number is missing
+E180,Missing Billing provider affiliation for the Rendering provider(s).
+W180,Missing Billing provider affiliation for the Rendering provider(s).
+E181,Invalid affiliation between Rendering and Billing providers.
+W181,Invalid affiliation between Rendering and Billing providers.
+E182,System Delay-No Additional Action Required
+W182,System Delay-No Additional Action Required
+E183,System Delay-Resubmission Required
+W183,System Delay-Resubmission Required
+E184,Fully Subsidized Policy - Policy's total premium is provided for by the Federally Facilitated Marketplace (FFM) or State Based Marketplace (SBM)
+W184,Fully Subsidized Policy - Policy's total premium is provided for by the Federally Facilitated Marketplace (FFM) or State Based Marketplace (SBM)

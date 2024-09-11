@@ -1,0 +1,5 @@
+Code,Description
+CR,Corrections and ReversalNote: This value is not to be used with 005010 and up.
+OA,Other Adjustment
+PI,Payer Initiated Reductions
+PR,Patient Responsibility

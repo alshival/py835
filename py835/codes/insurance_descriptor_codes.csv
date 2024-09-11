@@ -1,0 +1,53 @@
+Code,Description
+01,Short Term Insurance
+D,Disability Insurance
+M,Medicare Advantage Point of Service (POS) Plan that excludes Part D coverage
+12,"Medicare is secondary, Working Aged Beneficiary or Spouse with employer group health plan is primary"
+13,"Medicare is secondary, End-Stage Renal Disease Beneficiary in the mandated coordination period with an employer's group health plan is primary"
+14,"Medicare is secondary, no-fault insurance, including auto, is primary"
+15,"Medicare is secondary, Worker's Compensation is primary"
+16,"Medicare is secondary, Public Health Service (PHS) or Other Federal Agency is primary"
+17,Dental Insurance
+18,Vision Insurance
+19,Prescription Drug Insurance
+41,"Medicare is secondary, Black Lung is primary"
+42,"Medicare is secondary, Veteran's Administration is primary"
+43,"Medicare is secondary, Disabled Beneficiary Under Age 65 with a large group health plan (LGHP) is primary"
+47,"Medicare is secondary, other liability insurance is primary"
+48,Medicaid
+49,Medicare and Medicaid Dual Eligible
+AP,Automobile Insurance
+C1,Commercial Insurance
+CO,Beneficiary is under Consolidated Omnibus Budget Reconciliation Act (COBRA) coverage
+EP,Exclusive Provider Organization (EPO) Plan
+HB,Health Insurance Exchange (HIX) Bronze
+HD,High Deductible Health Plan (HDHP)
+HG,Health Insurance Exchange (HIX) Gold
+HM,Health Maintenance Organization (HMO) Plan
+HP,Health Insurance Exchange (HIX) Platinum
+HS,Health Insurance Exchange (HIX) SilverAn individual eligible for Medicare for whom Medicaid pays only Medicare premiums.
+IN,Indemnity PlanGives a subscriber the choice to select any provider. Payment is fixed percentage of the cost for covered care after satisfying an annual deductible.
+LC,"Long Term Care InsuranceCoverage designed to help pay for some or all long term care costs, reducing the risk that a policy-holder would need to deplete all of his or her assets to pay for long term care."
+LI,Life Insurance
+LT,Impacted by litigation
+MA,Medicare Part A
+MB,Medicare Part B
+MD,Medicare Part D
+ME,Medicare Advantage Preferred Provider Organization (PPO) Plan that excludes Part D Coverage
+MJ,Medicare Advantage Health Maintenance Organization (HMO) Plan that includes Part D Coverage
+MK,Medicare Advantage Health Maintenance Organization (HMO) Risk Plan that includes Part D Coverage
+ML,Medicare Advantage Indemnity Plan that includes Part D Coverage
+MM,Medicare Advantage Preferred Provider Organization (PPO) Plan that includes Part D Coverage
+MN,Medicare Advantage Indemnity Plan that excludes Part D coverage
+MO,Medicare Advantage Point of Service (POS) Plan that includes Part D Coverage
+MR,Medicare Advantage Health Maintenance Organization (HMO) Risk Plan that excludes Part D coverage
+MT,Medicare Advantage Health Maintenance Organization (HMO) Plan that excludes Part D coverage
+OA,Open Access Point of Service Plan (POS) Plan
+PE,Property Insurance - Personal
+PR,Preferred Provider Organization (PPO) Plan
+PS,Point of Service (POS) Plan
+RP,Property Insurance - Real
+SA,"Set Aside ArrangementSet aside funds arrangement that exists for patients that are identified for Insurance Type Code 14, 15 or 47."
+SP,Supplemental InsuranceAn insurance policy intended to cover non-covered charges of another insurance policy.
+WC,"Workers Compensation InsuranceCoverage provides medical treatment, rehabilitation, lost wages and related expenses arising from a job related injury or disease."
+WU,"Wrap-Up InsuranceA Workers Compensation Policy written for a specific job site, which will include or cover more than one insured."

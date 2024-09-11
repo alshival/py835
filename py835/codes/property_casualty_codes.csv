@@ -1,0 +1,737 @@
+Code,Description
+NPP,Non Payment of Premium
+COC,Company Cancelled or Underwriting Reasons
+CRQ,"Customer Request, Competition , Voluntary"
+FRD,Fraud by Insured
+NPS,Failure to Pay Surcharge
+REV,License or Registration Revoked
+VOC,Void Cancellation
+DIS,Dissatisfaction
+SLD,Vehicle Sold
+XFR,Transfer
+ACT,Financed Account
+CAN,Cancel/Rewrite
+BDT,Back Dated
+ITC,Intent to Cancel
+MCR,Mortgagee Cancellation Foreclosure
+MIR,Mortgagee Interest Removed
+FLE,Flood Expiration
+FLS,Flood Community Suspension
+OTH,All Other
+AIR,aircraft
+ANI,animal(s)
+AST,assault
+BDS,backup from sewer/drain
+BGL,burglary
+BRH,breakage/rough handling
+CLP,collapse
+CLS,collision
+CLV,collision of vessel
+CTM,contamination/pollution
+CVR,civil riot
+EQK,earthquake
+EXP,explosion
+FIR,fire
+FLD,flood
+FLO,falling objects
+FLV,fire of vessel
+FRZ,freezing
+GAV,general average
+GLS,glass
+GVA,government action
+HAL,hail
+HEC,heat expansion/contraction
+HUR,hurricane
+ICE,weight of ice/snow/sleet
+LGT,lightning
+LSL,landslide
+LST,lost overboard
+MEC,mechanical breakdown
+MUD,mudslide
+MVS,Moving and Storage
+MYD,mysterious disappearance
+NUC,nuclear hazard
+OTH,other
+PWI,power interruption
+PWS,power surge
+RIO,riot
+ROB,robbery
+SEA,sea water
+SHC,sinkhole collapse
+SHS,shortage/slackage
+SKV,sinking of the vessel
+SMK,smoke
+STV,standing of the vessel
+SUB,subsidence
+THF,theft
+TOR,tornado
+VEH,vehicles
+VMM,vandalism/malicious mischief
+VOL,volcanic
+WAR,war/military action
+WND,windstorm
+WTR,water/steam
+ZZZ,Mutually Defined
+CNC,Conical
+DOM,Domed
+GBL,Gabled
+NRM,Normal (flat)
+PYR,Pyramidal
+SLP,Sloped
+UPP,Unpaid Premium
+EUP,Recording of Unpaid Premium Done in Error
+-,Concurrent Causation - Ca. Only
+z,43 not concurrent causation
+BC,Building Construction Defect
+EM,Earth Movement Excluding Earthquake
+FD,"Flood, Non-insured Peril"
+XC,"All other, claims using cause of loss"
+Dwell,Dwelling (Coverage A)
+OS,Other Structures (Coverage B)
+PP,"Personal Property (Coverage C - HO 1,2,3,5)"
+PPTC,"Personal Liability (Coverage C - HO 4,6)"
+LOU,Loss of Use (Coverage D)
+PL,Personal Liability (Coverage E)
+MEDPM,Medical Payments (Coverage F)
+SPPP,Special Personal Property (HO15)
+AALMT,Unit-Owners Additions & Alternations Increase Limits (HO31)
+AASPC,Unit-Owners Additions & Alternations Special Coverage (HO32)
+RNTOT,Unit-Owners Rental to Others (HO33)
+OTSTR,Unit-Owners Other Structures (HO34)
+LAC,Loss Assessment (HO35)
+LACEQ,"Loss Assessment For Earthquake (HO35A, AN)"
+GLABR,Glass Breakage (HO37)
+MISBD,Miscellaneous Building Real Property Coverage (HO38-HO6)
+SRORP,Structures Rented to Others (HO40)
+ADDRP,Additional Insured (HO41)
+OFFRP,"Office, Professional Private School, Studio-Residence Premises (HO42)"
+OFFNR,"Office, Professional Private School, Studio-Other Residence (HO43)"
+RESPR,Residence Premises 3 or 4 Family Dwelling (HO44)
+THEFT,Theft Extension (HO46)
+OTSRP,Other Structures Residence Premises (HO48)##
+SRBAA,Secondary Residence Building Addition & Alteration (HO49)
+APPSR,Additional Personal Property Secondary Residence (HO50)
+BAA,Building Additions & Alterations (H04 or 4A)  (HO54)
+CDTCD,Credit Card Forgery & Counterfeit Money Including Limits (HO53)
+ERQK,"Earthquake (HO54, 55)"
+SPP,Scheduled Personal Property (HO61)
+APPAW,Additional Amount of Personal Property Away From Premises (HO66)
+GLASS,Scheduled Glass (HO68)
+ADDRR,Additional Residence Rented To Others (HO70) 1 or 2 Family
+BUSNS,Business Pursuits (HO71)
+IFPL,Incidentals Farming Personal Liability (HO72)
+FCPL,"Farmers CPL (HO73, HO296)"
+TFFDP,3 or 4 Family Dwelling Premises Liability HO4 (HO74)
+WATER,Watercraft (HO75)
+RRT,Residence Rental Theft (HO80)
+PIHOM,Personal Injury (HO82)
+SINK,Sinkhole Collapse (HO99)
+SNOWM,Snowmobile (HO-164)
+STLD,Special Theft Loss With Deductible Form # Varies (HO188NY)
+WINDX,Windstorm Exclusion (HO194)
+SEWER,Water Backup of Sewers & Drains (HO208)
+UNJWP,"Unscheduled Jewelry, Watches, Furs (HO210, 65)"
+ALARM,Premises Alarm (HO216)
+INFGD,Inflation Guard (Form # Varies) EX.-HO241 for 6%
+SPLSO,Special Loss Settlement (HO256)
+SOUND,Sound Receiving & Transmitting Equipment (HO257)
+BOLAW,Building Ordinance or Law Coverage (HO277)
+MINES,Mines Subsidence (HO287)
+PPREP,"Personal Property Replacement Cost Form # Varies (HO290, 299)"
+BUSPR,Business Property (HO287)
+LNDFR,Landlords Furnishings (HO308)
+PDOC,Physicians & Dentist Outside Coverage (HO313) Texas Only
+ADEXC,Additional Extended Coverage - Texas (HO366)
+FVREP,Full Value Replacement Cost
+FDC,Fire Department Service Charge (DP0012)
+EXTCV,Extension of Coverage
+WTRBD,Waterbed Liability
+MUINS,Multiple Insurance Companies (HO178)
+SUBRT,Suburban Home Rating Credit
+HLFC,Loss Free Credit
+ADDRL,Additional Premises Liability Extension
+PSVD,"Physicians, Surgeons, Veterinarians, Dentists (HO69)"
+WHFEN,Windstorm/Hail - Fences or Walls (HO288)
+WHGRN,Windstorm/Hail - Green Houses/Hot Houses (HO288)
+WHSLT,Windstorm/Hail - Slatehouses or Pergolas (HO288)
+WHCAB,Windstorm/Hail - Cabanas (HO288)
+WHBOT,Windstorm/Hail - Boathouses or Docks (HO288)
+WHOUT,Windstorm/Hail - Outdoor Equipment (HO288)
+WCFIN,"Workers Compensation - Full Time Inservant (HO90, HO91)"
+WCPIN,"Workers Compensation - Part-Time Inservant (HO90, HO91)"
+WCFOT,"Workers Compensation - Full Time Outservant (HO90, HO91)"
+WCPOT,"Workers Compensation - Part-Time Outservant (HO90, HO91)"
+WCDRV,"Workers Compensation - Driver (HO91, HO91)"
+WCINC,"Workers Compensation - Incidental (HO90, HO91)"
+WHAWN,Windstorm/Hail Coverage - Awnings (HO288)
+WHSCR,Windstorm/Hail Coverage - Screens (HO288)
+WHSGN,Windstorm/Hail Coverage - Signs (HO288)
+WHANT,Windstorm/Hail Coverage - Antennas (HO288)
+EGCTX,Texas Engaged Couples Endorsement (HO357)
+SWHTX,Texas Windstorm Hurricane and Hail Exclusion (HO361)
+PC,Home Computer (HO314)
+CCMO,Included Coverage C Special Liability Limit - Money (HO65)
+CCSV,Included Coverage C Special Liability Limit - Silverware (HO65)
+CCSC,Included Coverage C Special Liability Limit - Securities (HO65)
+CCGU,Included Coverage C Special Liability Limit - Guns (HO65)
+PLC,Personal Umbrella
+NHDIS,New Home Discount
+RDIS,Renovation Discount
+HABCD,Homeowners Form 7
+HDACA,Home Day Care Coverage in Residence
+FREEZ,Refrigerated Foods Products Clause
+SCCND,Security Condominium Credit
+LNDMV,Land Movement
+NSMKR,Nonsmoker's Discount
+MATUR,Experienced Homeowner
+WOODS,Woodstove Surcharge
+SECUR,Safe Home Credit
+CTTX1,City Tax
+STSR1,State Surcharge 1
+STSR2,State Surcharge 2
+ACCT,Multi Policy Credit
+STSR3,Surcharge 3
+STSR4,Surcharge 4
+CTTX2,City Tax 2
+OPTE,Off Premises Theft Exclusion
+PRDED,Deductible Adjustment
+OCCUP,Occupancy
+FELIA,Fellow Employee Liability
+PCLUM,Personal Umbrella Uninsured Motorist
+INSPC,Inspected Dwellings Credit
+COLAP,Collapse Coverage Endorsement
+THFTB,Theft of Building Materials (HO266)
+RELOC,Relocation Expenses for Tenants (HO270)
+CCEAV,Electronic Apparatus in Vehicle (HO65)
+CCEAB,Coverage C Electronic Apparatus Business Use (HO65)
+OSOPB,Off Premises Blanket Coverage (HO91)
+OSOPS,Off Premises Structure Specific coverage (HO92)
+IFPLA,Incidental Farming Away From Residence Premises (HO72)
+OTSRA,Specific Structure Away From Residence Premises (HO92)
+ROOF,Roof Type Credit/Surcharge
+CRERF,Residential Earthquake Recover Fund
+FVS##,Guaranteed Replacement Cost on Other Structures on Premises
+ERQKF,Earthquake and Flood (Mobile Homes)
+FAIRP,Fair Plan Credit (California)
+TOTEC,Total Electric Credit
+CCFU,Increased Coverage C Special Liability Limit - Fur (HO65)
+LANDC,Incidental Motorized Land Conveyances - Liability Only
+GOLF,Golfcart Physical Damage
+BUS##,Business Pursuits (HO71)
+EQP##,Equipment
+MIN##,Mines Subsidence (HO287)
+LLF##,Landlords Furnishings (HO308)
+DWLEX,Dwelling Extension
+FARM,Farm and Farm Equipment
+BL,Business Liability
+FLIAB,Farm Liability
+WLIAB,Watercraft Liability
+PCO,Products Completed Operations
+GNEAG,General Aggregate
+LOR,Loss of Rents
+EMPD,Employee Dishonesty
+DO,Directors and Officers
+BM,Boiler and Machinery
+EQUIP,Equipment
+PHYS,Physical Damage Unit at Risk
+POWSQ,Power Squadron Training Credit
+CGAUX,Coast Guard Auxiliary Credit
+SAIL,Sailboat Credit
+DIESL,Diesel Engine Credit
+COAST,Coastal Water Surcharge
+OLDBT,Older Boat Surcharge
+SAFEQ,Safety Equipment
+WSKI,Waterski medical
+CSL,Single Limit Liability
+UNISG,Uninsured Motorists Liability - Single Limit
+MEXCO,Mexico Coverage
+HULL,Hull Coverage - Physical Damage
+MOTR1,Outboard Motor 1
+MOTR2,Outboard Motor 2
+DNGHY,Dinghy Coverage
+TRLR,Boat Trailer
+LAYCP,Layup Credit
+BCL,Building - Fire & Lightning
+BEC,Building - Extended Coverage
+BVMM,Building Vandalism & Malicious Mischief
+PPFL,Personal Property Fire & Lightning
+PPEC,Personal Property - Extended Coverage
+PPVMM,Personal Property - Vandalism & Malicious Mischief
+RCC,Replacement Cost Contents
+LRFL,Loss of Rental Income - Fire & Lightning
+LREC,Loss of Rental Income - Extended Coverage
+LRVMM,Loss of Rental Income - Vandalism & malicious Mischief
+LRRC,Loss of Rental Income - Replacement Cost
+FRV,Fair Rental Value
+ALEXP,Additional Living Expense
+GENEN,General Endorsement
+PST,"Plants, Shrubs and Trees - Form DP - 1 only"
+WHBSF,Windstorm/Hail Broad and Special Forms
+PIOCC,Permitted Incidental Occupancies
+PRESH,Premium Sharing Two or More Policies
+IAADD,"Improvements, Alterations and Additions"
+DPPAY,Deferred Premium Payment
+RENL,Renewal Plan
+SPPRV,Special Provision
+WHODC,Windstorm/Hail 1% Deductible Clause
+WHTDC,Windstorm/Hail 2% Deductible Clause
+LAP,Loss Assessment Property
+LAPEQ,Loss Assessment Property (Including Earthquake/Volcanic Eruption)
+BDGIT,Building Items Coverage (Special Coverage)
+BDGNP,Building Items Coverage  (Named Perils)
+DEBRL,Debris Removal
+PWEXC,Paint and Waterproofing Exclusion - Windstorm Exterior
+WWCOV,World-Wide Coverages
+RREP,Reasonable Repairs
+PRML,Property Removal
+MERCH,Merchandise in Storage
+RCMT,Riot and Civil Commotion
+EXP,Explosion
+VAC,Ordinary Vacancy Clause
+BBRD,Building -  Broad Form
+BSPL,Building - Special
+BAEC,Building - Additional Extended Coverage
+PPBRD,Personal Property - Broad Form
+PPSPL,Personal Property - Special
+PPACEC,Personal Property - Additional Extended Coverage
+BEQK,Building - Earthquake
+PPEQK,Contents - Earthquake
+COC,Course of Construction
+CPL,Comprehensive Personal Liability
+CPLA,Comprehensive Personal Liability Additional Locations
+LIAB,Premium Liability
+LIABA,Premises Liability Additional Locations
+THEFA,Broad Form Theft - Loss Away From Premises
+VSI,Lienholder's Single Interest
+BI,Bodily Injury Liability
+CSL,Combined Single Limit Liability
+PD,Property Damage- Single Limit
+MEDPM,Medical Payments
+UMISG,Uninsured Motorist BI Single Limit
+UMISP,Uninsured Motorist BI Split Limit
+UMIPD,Uninsured Motorist Property Damage
+UNDSG,Underinsured Motorist BI Single
+UNDSP,Underinsured Motorist BI Split Limit
+UNDPD,Underinsured Motorist Property Damage
+ADDA,Automobile Death Indemnity or Benefits
+ADDAB,Automobile Death Indemnity and Special Disability Benefits
+ADDC,Total Disability Benefits
+ADDD,Total Disability Benefits Max 200 weeks
+MEXCO,Mexico Coverage
+ADDG,Total Disability for Persons Gainfully Employed
+ADDN,Total Disability for Persons Not Gainfully Employed
+PHE,Passenger Hazard Exclusion
+ASUMP,Accident Supplement
+UMCSL,Uninsured Combined Single Limit
+UNCSL,Underinsured Combined Single Limit
+PCL,Personal Umbrella
+COLL,Collision Coverage
+CCOL,Customized Coverage - Collision
+CCOMP,Customized Coverage - Comprehensive
+COMP,Comprehensive Coverage
+LUSE,Loss of Use
+RREIM,Rental Reimbursement
+TL,Towing and Labor
+SORCV,Sound Receiving and Transmitting
+TR,Tapes and Records
+MHC,Motor Home Content
+FTWFR,"Fire, Theft, Windstorm, Floor or Riot (Texas Only)"
+FTC,"Fire, Theft, and Combined Additional Coverage (Texas Only)"
+CAC,Combined Additional Coverages
+PARK,Parked Car Collision
+RR,Repair/Replacement
+THEFT,Theft
+PFRTH,Fire and Theft
+FTV,"Fire, Theft and  Vandalism"
+PIP,Basic PIP
+APIP,Additional PIP
+EPIP,Extended PIP
+BPIP,Broadened PIP or PIP for Named Individuals
+FPBPA,First Party Benefits (Pennsylvania)
+MEBPA,Medical Expense Benefits (Pennsylvania)
+WLBPA,Work Loss Benefits (Pennsylvania)
+FEBPA,Funeral Expense Benefits (Pennsylvania)
+ADBPA,Accidental Death Benefit (Pennsylvania)
+CPBPA,Combined First Party Benefits (Pennsylvania)
+LP,Loss Payee
+BAY,Bay
+BOX,Box/rectangular
+CIR,Circular
+CLE,Clerestory
+CRC,Semi Circular
+EXT,Exterior
+FLT,Flat Roof
+GBD,Gable Dormer
+GBL,Gable Roof and Box
+GBT,Gable Roof and Box with Tie In
+GMB,Gamble Roof
+HIP,Hip Roof
+INC,Intersecting Cubes
+MSD,Mansard Roof
+OFF,Offset
+OTH,Other
+PKR,Peaked Room
+PLY,Polygon (assume all sides equal)
+SHD,Shed Roof
+SLP,Sloped Ceiling Room
+TRI,Triangular Room
+TRP,Trapezoid Room
+CE,Coverage endorsement
+PE,Policy Endorsement
+PF,Policy Form
+FPM,payment made
+FU,frequently used
+GFT,gift
+IAL,included in another line item
+IFU,infrequently used
+LTI,labor tax included
+MTI,material tax included
+NCI,not covered
+NU,never used
+SAL,salvage
+SLB,salvageable
+SU,seldom used
+TXL,taxable labor
+TXM,taxable material
+UAB,used on an average basis
+DFIRE,Fire
+EQKP,Earthquake
+FLOOD,Flood
+HOME,Home
+MOS,Mercantile
+PPART,Apartment
+PPCHO,Condominium Association
+PPCHR,Church
+PPMBH,Mobile Home
+PPTHO,Renters
+RNTOT,Rental Dwelling to Others
+RCUP,Rental Condominium Unit Owner
+FARM,Farm Ranch Owners
+BOAT,Boat Owner
+COTHR,Other Commercial
+BOP,Business Owners
+HURC,Hurricane
+WIND,Windstorm
+CNT,Contractors
+PLU,Personal Liability Umbrella
+PPUHO,Condominium Unit
+RCBAP,Flood Condominium Association
+PRP,Flood Preferred Risk
+STAND,Flood Standard Policy
+MPPP,Flood Mortgage Protection Portfolio Plan
+PAP,Personal Articles
+CUM,Cumulative
+HA,Hazardous activity
+HC,Hazardous condition
+IA,Insured agreed to Estimate
+NCM,not cumulative
+OC,Occupancy Compatible w/ type
+OCC,Occupied
+OI,Overinsured
+PM,Poor maintenance
+RA,Risk alert
+RD,Risk details
+UI,Underinsured
+UNF,Unfurnished
+UO,Unoccupied
+VA,Vacant
+APP,Appliances
+ART,Art
+ATH,Athletic/sports
+BKS,Books/Cards/Photos
+BTS,Fishing/Boats
+CAM,Camera equipment
+CLC,Collectibles
+CLE,Cleaning Supplies/Accessories
+CLO,Clothing
+CMP,Camping/Hiking
+COS,Cosmetics/Medicines/Toiletries
+CPT,Computers
+CRN,Currency
+DEC,Decorative Items
+DRP,Draperies/Curtains
+EXR,Exercise Equipment
+FDS,Foods
+FRN,Furniture
+FUR,Furs
+GAR,Garden/Patio
+GUN,Hunting/Bows/guns
+HOB,Games/Hobbies
+JLR,Jewelry
+KIT,Kitchenware/tools
+LGG,Luggage
+LIN,Bedding/Linens
+MLL,Military List
+MUS,Musical Instruments
+RUG,Carpets/Rugs
+SLV,Silverware
+SUP,Office Equipment/Supplies
+TLS,Tools/Automotive
+TOY,Toys
+TVR,TV/Radio/Recorders/Electronics
+ACV,Actual cash value
+APT,Apartment
+BO,Boat Owners
+BUS,Business Policy
+CHR,Church policy
+CND,Condo
+CNT,contractors policy
+FIR,Fire
+FLD,Flood policy
+FRM,Farm and Ranch Policy
+GUA,Guaranteed
+HO,Homeowner
+MMH,Manufacture or Mobile Home
+NA,No policy applicable
+OTH,Other policy type
+PAP,Personal Articles Policy
+PLU,Personal Liability Umbrella Policy
+RCV,Replacement Cash Value
+RNT,Renters
+NBS,New Business
+BND,Binder
+RWL,Renewal
+PCH,"Policy ChangeIf the policy change can be identified, the DRC, CVC, or VHC codes should be used, if applicable. If unable to identify the type of policy change or it does not apply to those areas, use the PCH code."
+XLC,Cancellation
+REI,Reinstatement
+ACK,Insurance Verification
+NIS,No Insurance
+DRC,Driver Changed
+CVC,Coverage Changed
+VHC,Vehicle Changed
+CUP,Clear Unpaid Premium
+INQ,Policy Inquiry
+LOD,Initial Load
+UNH,Unresolved No Hit
+RCL,Recall
+EPI,Insurance Verification
+RWF,Renewal Forthcoming
+OTH,All Other
+NPP,Non Payment of Premium
+REV,Reversal of Cancellation
+ERR,Cancellation Done in Error
+005,Submission date
+010,Reporting start date
+015,Reporting end date
+020,Insured last name
+025,Insured first name
+030,Insured middle name
+035,Insured name prefix
+040,Insured name suffix
+045,Insured drivers license number
+050,Insured street address
+055,Insured city address
+060,Insured state or province address
+065,Insured postal code address
+070,Insured country code address
+075,Transaction type code
+080,Transaction sub type code
+085,Insurance policy or binder number
+090,Fleet policy code
+095,Voluntary or assigned risk code
+100,Liability or collision code
+105,Insureds drivers licensing state code
+107,Vehicle specific information
+110,Insureds date of birth
+115,Policy effective date
+120,Transaction effective date
+125,Policy expiration date
+130,Premium amount paid/unpaid
+135,Operator # date of birth
+140,Operator # drivers licensing state code
+145,Operator # last name
+150,Operator # first name
+155,Operator # middle name
+160,Operator # name prefix
+165,Operator # name suffix
+170,Operator # drivers license number
+175,Operator # street address
+180,Operator # city address
+185,Operator # state or province address
+190,Operator # postal code address
+195,Operator # country code address
+200,Vehicle identification number
+202,LOD/NBS sent and record already on file
+203,VIN passed check digit validation
+204,VIN failed check digit validation
+205,Vehicle make
+206,No match after extended VIN search
+210,Vehicle model
+215,Vehicle century
+220,Vehicle year
+221,Vehicle license plate number
+225,Owner # date of birth
+230,Owner # drivers licensing state code
+235,Owner # last name
+240,Owner # first name
+245,Owner # middle name
+250,Owner # name prefix
+255,Owner # name suffix
+260,Owner # drivers license number
+265,Owner # street address
+270,Owner # city address
+275,Owner # state or province address
+280,Owner # postal code address
+285,Owner # country code address
+286,XLC sent and record not found
+290,Excluded operator # date of birth
+295,Excluded operator # drivers licensing state code
+300,Excluded operator # last name
+305,Excluded operator # first name
+310,Excluded operator # middle name
+315,Excluded operator # name prefix
+320,Excluded operator # name suffix
+325,Excluded operator # drivers license number
+330,Excluded operator # street address
+335,Excluded operator # city address
+340,Excluded operator # state or province address
+345,Excluded operator # postal code address
+350,Excluded operator # country code address
+355,Total number of transactions
+500,Matched after extended VIN search
+CEI,Ceiling
+CPR,Ceiling Perimeter
+ELV,Elevation
+FLR,Flooring
+FPR,Floor Perimeter
+OLH,One Long Wall
+OPN,Opening
+OSW,One Short Wall
+PER,Perimeter
+RDG,Ridge
+RFG,Roofing
+WAL,Walls
+WCC,Walls and ceiling combined
+EPI,Insurance Verification
+NBS,New Business
+PCH,Endorsement or Policy Change
+REI,Reinstatement
+RWL,Renewal
+XLC,Cancellation
+CRQ,Customer Request
+NPP,Non-Payment of Premium
+COC,Company Cancelled
+MIR,Mortgage Interest Removed
+IN,Insured
+MG,Mortgagee
+BDN,Balance Due Notice
+CEI,Ceiling
+CPR,Ceiling Perimeter
+ELV,Elevation
+FLR,Flooring
+FPR,Floor Perimeter
+OLH,One Long Wall
+OPN,Opening
+OSW,One Short Wall
+PER,Perimeter
+RDG,Ridge
+RFG,Roofing
+WAL,Walls
+WCC,Walls and ceiling combined
+ACO,Acoustical
+APP,Appliances
+AWN,Awning/canopies
+CAB,Cabinets
+CLN,Clean
+CON,Concrete
+CRF,"Carpentry, finish"
+CRR,"Carpentry, rough"
+CTP,Cabinet tops
+DER,Debris removal
+DET,Demolition/ Tear Out
+DOR,Doors/Jambs
+DRY,Drywalls
+ELE,Electrical
+ELF,Electrical Fixtures
+EQU,Equipment/  Rental
+FCC,Flooring Carpet
+FCP,Flooring Pad
+FCW,Flooring wood
+FEE,Permits
+FEN,Fencing
+FLP,Fireplace
+FSQ,Flooring - Slate or Quarry Tile
+FVS,Flooring - sheet vinyl
+FVT,Flooring - vinyl title
+HRD,Hardware
+HVC,HVAC
+INB,Insulation - batt or blown
+INR,Insulation - rigid
+INS,Insulation - sprayed
+JSB,Jack/Shore/brace
+MAS,Masonry
+MOB,Mobile Home - skirting and setup
+MOV,Moving and Storage
+MSC,Miscellaneous
+MSD,Mirrors and shower doors
+PLA,Plaster
+PLB,Plumbing
+PLG,Pilings
+PNL,Paneling
+PNT,Painting
+RFA,Roofing- Asphalt
+RFB,Roofing- Built up
+RFM,Roofing- Metal
+RFT,Roofing- Tile
+RFW,Roofing- Wood
+SCF,Scaffolding
+SDA,Siding- Aluminum
+SDV,Siding-Vinyl
+SDW,Siding - Wood
+SFG,"Soffit, fascia and gutter"
+SLT,Shrubs/Lawn/Trees
+STR,Stairs
+STU,Stucco and exterior plaster
+TEX,Texture
+TLE,Tile
+TMP,Temporary repairs
+WDN,Windows/Skylights/Repairs
+WPR,Wallpaper
+010,Policy Premium
+015,Premium Rewrite
+020,Premium Transfer
+025,Renewal Premium
+030,Policy Adjustment
+035,Reinstated Policy
+040,Cancellation
+045,Cancellation or Rewrite
+050,Discount
+055,Dividend
+060,Discount Adjustment
+065,Cancellation Prior Policy Period
+070,Tax/Surcharge
+080,Payment
+090,Payment Rejected
+100,Refunded to Insured
+105,Refunded to Third Party
+110,Transfer Credit from Another Policy
+115,Transfer Debit from Another Policy
+120,Transfer Credit to Another Policy
+125,Transfer Debit to Another Policy
+130,Decrease in Coverage
+135,Increase in Coverage
+ACV,Actual cash value
+GUA,Guaranteed
+RCV,Replacement Cash Value
+01,Fire
+02,Windstorm
+03,Hail
+04,Explosion
+05,Lightening
+06,Riots
+07,Smoke
+08,Aircraft
+09,Vehicles
+10,Volcanic Eruption
+30,Earthquake
+31,Sinkhole
+32,Flood
+33,Mine Subsidence
+34,Sewer and Drain
+35,Hurricane
+36,Windstorm and Hail
+37,Tropical Occurrence
+38,Roof Exclusion
+39,Fungus
+40,Named Storm
+41,Wildfire
