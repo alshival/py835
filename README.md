@@ -1,73 +1,94 @@
 <img src="DHR-Health-Logo.png" width="50%">
 
 
+# PY835
 
-# py835 
-**Python Package for Parsing 835 EDI Files**
+The `EDI835Parser` is a Python-based tool designed to parse `.835` EDI files using the `pyx12` library. It extracts critical information such as patient data and transaction details, providing an easy-to-use interface that outputs the parsed data as Pandas DataFrames for further analysis.
 
-`py835` is a Python package developed by DHR Health for parsing healthcare 835 EDI files. The package is built on top of the `pyx12` library and provides an easy-to-use function to parse EDI 835 files into structured data, which can be output in JSON format for further analysis or integration into other systems.
-
-#### Key Features:
-- **835 EDI File Parsing**: Automatically reads and parses 835 EDI files, which contain detailed information about healthcare payments and remittance advice.
-- **Structured Output**: Each segment of the EDI file is broken down into its constituent elements, with segment IDs, element names, and values organized into a JSON-friendly format.
-- **Error Handling**: Built-in error handling for parsing issues, leveraging `pyx12`'s robust error reporting.
-
-#### How It Works:
-- The package uses the `pyx12` library to handle the low-level parsing of EDI files.
-- It iterates through each segment of the 835 file and extracts data, including segment IDs, element names, and values, organizing them into a structured format.
-- The parsed output is returned as a Python list of dictionaries, each representing a segment with its elements, ready to be serialized into JSON or processed further.
-
-#### Benefits:
-- Simplifies the process of extracting and interpreting payment data from 835 files, enabling easier integration into your healthcare system workflows.
-- Provides a clear and structured representation of complex EDI files, making it easier for developers and data teams to analyze remittance advice data.
+## Features
+- **Parse EDI 835 Files**: Efficiently load and parse `.835` files to extract important financial and transaction data.
+- **Transaction Details**: Extract comprehensive transaction information, including service line data, payer, and payee information.
+- **Column Naming**: Optional renaming of DataFrame columns using dynamic attributes extracted from the EDI file.
 
 ## Installation
+
 To install `py835`, run 
 ```
 pip install git+https://github.com/DHR-Health/py835.git
 ```
 
-## Usage 
+## Usage
 
-The `py835.parse()` function reads an 835 EDI file and returns a detailed, structured representation of the file in JSON format. Each dictionary represents a segment of the EDI file and contains metadata about the segment along with its individual elements.
+`py835` is meant to streamline importing data from 835 files into your data warehouse.
 
-### Example Usage
-```
+### Basic Example: Parsing an 835 EDI File for Line-Item Transactions
+
+Here is a simple example of how to parse a single `.835` file and extract its transaction details:
+
+```python
 import py835
 
-# Parse an 835 file
-result = py835.parse('path/to/your/file.835')
+# Path to a single .835 file
+file_path = '/path/to/your/835/file.835'
+
+# Initialize the parser
+parser = py835.EDI835Parser(file_path)
+
+# Extract transaction data with optional renaming of columns
+transaction_df = parser.transactions(column_names=True)
+
+# Display the transaction data
+print(transaction_df)
+
+# Upload to a database
+import sqlite3
+conn = sqlite3.connect('example.db')
+transaction_df.to_sql('835_transaction_line_items',conn,index=False,if_exists='append')
 ```
 
-### Example Output
-The output is a dictionary where the keys are Patient Control Numbers, and the values are lists of segments related to that patient.
-```
-{
-    "R7836647": [
-        {
-            "segment_id": "CLP",
-            "segment_name": "Claim Payment Information",
-            "elements": [
-                {"element_index": 1, "element_name": "Patient Control Number", "element_value": "R7836647"},
-                {"element_index": 2, "element_name": "Claim Status Code", "element_value": "4"},
-                {"element_index": 3, "element_name": "Total Claim Charge Amount", "element_value": "39.16"},
-                ...
-            ]
-        },
-        {
-            "segment_id": "NM1",
-            "segment_name": "Patient Name",
-            "elements": [
-                {"element_index": 1, "element_name": "Entity Identifier Code", "element_value": "QC"},
-                {"element_index": 2, "element_name": "Patient Last Name", "element_value": "LOZANO MONTALVO"},
-                ...
-            ]
-        },
-        ...
-    ],
-    "R9876543": [
-        // Segments for another patient
-    ]
-}
+### More Complicated Example: Parsing a Directory of 835 Files
 
+If you need to process multiple `.835` files in a directory, the following example demonstrates how to loop through each file, extract the transaction data, and combine the results into a single DataFrame.
+
+```python
+import os
+import re
+import py835
+import pandas as pd
+
+# Directory containing .835 files
+directory_path = '/path/to/your/directory'
+
+# Initialize a list to hold all parsed DataFrames
+dfs = []
+
+# Loop through files in the directory, parse, and extract transactions
+for file835 in [os.path.join(directory_path, x) for x in os.listdir(directory_path) if re.search(r'.*\.835.*', x)]:
+    parser = py835.EDI835Parser(file835)
+    transaction_data = parser.transactions(column_names=True)
+    transaction_data['file'] = file835  # Add the file name to each row
+    dfs.append(transaction_data)
+
+# Combine all dataframes into one
+combined_df = pd.concat(dfs, ignore_index=True)
+
+# Display the combined dataframe
+print(combined_df)
+
+# Upload to a database
+import sqlite3
+conn = sqlite3.connect('example.db')
+combined_df.to_sql('835_transaction_line_items',conn,index=False,if_exists='append')
 ```
+
+## Methods
+
+- **`patients()`**: Returns a Pandas DataFrame containing patient-related information extracted from the `.835` file.
+- **`transactions(column_names=False)`**: Returns a Pandas DataFrame of transaction data. Optionally, renames columns based on attributes extracted from the file.
+
+## Dependencies
+- `pyx12`
+- `pandas`
+
+## License
+This project is licensed under the MIT License.

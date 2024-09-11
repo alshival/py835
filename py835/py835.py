@@ -121,15 +121,13 @@ class EDI835Parser:
                 }
 
             elif seg_id == "SVC":
-                # Create a flattened entry by combining data from the transaction, claim, and service line
-                service_line_entry = {
+
+                # Append the flattened service line entry to the list for DataFrame creation
+                flattened_data.append({
                     **current_transaction,  # Include all transaction-level data
                     **current_claim,        # Include all claim-level data
                     **segment_data          # Include all service line (SVC) data
-                }
-
-                # Append this flattened service line entry to the list for DataFrame creation
-                flattened_data.append(service_line_entry)
+                })
 
             elif seg_id == "NM1":
                 # Capture patient information when NM101 (entity identifier code) is "QC" (indicating the patient)
@@ -151,11 +149,13 @@ class EDI835Parser:
             elif seg_id == "N1":
                 # Capture payer or payee information
                 if segment_data.get("N101") == "PR":  # Payer information
+                    current_transaction["Payer"] = segment_data.get("N102")
                     current_transaction["Payer Information"] = {
                         "Payer Name": segment_data.get("N102"),
                         "Payer Identifier": segment_data.get("N104")
                     }
                 elif segment_data.get("N101") == "PE":  # Payee information
+                    current_transaction["Payee"] = segment_data.get("N102")
                     current_transaction["Payee Information"] = {
                         "Payee Name": segment_data.get("N102"),
                         "Payee Identifier": segment_data.get("N104")
@@ -172,6 +172,6 @@ class EDI835Parser:
 
         # If column_names is True, replace the column names using the attributes dictionary
         if column_names:
-            df = df.rename(columns=lambda col: self.attrs.get(col, col))
+            df = df.rename(columns=lambda col: col + ' - ' +self.attrs.get(col, col))
 
         return df
