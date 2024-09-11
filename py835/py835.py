@@ -10,6 +10,44 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CODES_DIR = os.path.join(BASE_DIR, 'codes')
 
+
+##########################################################################################
+# Codes
+##########################################################################################
+dtm_codes = {
+    '405': 'Production',
+    '036': 'Coverage',
+    '232': 'Statement',
+    '233': 'Statement',
+    '050': 'Claim Received',
+    '150':'Service Date',
+    '151': 'Service Date',
+    '472': 'Service Date'
+}
+ref_codes = {
+    'EV': "Payer Identification",
+    'F2': "Version",
+    'LU': "Service",
+    '1S': 'Service',
+    'APC': 'Service',
+    'RB': 'Service',
+    'PQ': 'Payee Identification',
+    'HPI': 'Provider',
+    'SY': 'Provider',
+    'TJ': 'Provider',
+    '1C': 'Provider',
+    '1G': 'Provider',
+    '0K': 'Policy',
+    '1L': 'Other',
+    '1W': 'Other',
+    'F8': 'Other',
+    'IG': 'Other'
+}
+
+##########################################################################################
+# Parser
+##########################################################################################
+
 class EDI835Parser:
     def __init__(self, file_path):
         self.file_path = file_path
@@ -71,25 +109,32 @@ class EDI835Parser:
         for seg in self.context_reader.iter_segments():
             seg_node = seg.x12_map_node
             # Collect attributes for analysis (optional)
-            attributes_dict = attributes_dict.union(set((child.id, child.name) for child in seg_node.children))
+            # Standard
+            attributes_dict = attributes_dict.union(set((child.id, child.name) for child in seg_node.children if seg.id not in ['REF','N1','NM1','DTM']))
+            # Flagged
+            attributes_dict = attributes_dict.union(set((child.id + str(seg.seg_data.get_value(seg.id+"01")), child.name) for child in seg_node.children if seg.id in ['REF','N1','NM1']))
+            # Dates
+            attributes_dict = attributes_dict.union(
+                set(
+                    ( child.id + str(dtm_codes[seg.seg_data.get_value(seg.id+"01")]), child.name ) 
+                    for child in seg_node.children if seg.id == 'DTM'))
         self.attrs = dict(attributes_dict)
 
-    def transactions(self,column_names=False):
+    def transactions(self, column_names=False):
         # Extract transaction data from the context reader
-        transactions_data = []
-        current_patient_control_number = None
-        current_clp_segment = None
-
-        # Rewind the context_reader
-        self.load_context()
-
-
-        # Initialize a list to hold the flattened data for the DataFrame
         flattened_data = []
-
+        global_info = {}
+        
         # Initialize containers for transactions, claims, and service lines
         current_transaction = None
         current_claim = None
+        current_se = None
+        current_cas = None
+        claims = []
+        current_service_line = None
+
+        # Rewind the context_reader
+        self.load_context()
 
         for seg in self.context_reader.iter_segments():
             seg_node = seg.x12_map_node
@@ -104,74 +149,83 @@ class EDI835Parser:
                 )
             )
 
+            # Handle global info (ISA level)
+            if seg_id == "ISA":
+                global_info.update(segment_data)
+            if seg_id == "DTM":
+                # Global date
+                date_data = dict(zip([i + dtm_codes[seg_data.get_value("DTM01")] for i in segment_data.keys()], segment_data.values()))
+                if seg_data.get_value("DTM01") == "405":
+                    global_info.update(date_data)
+                if seg_data.get_value("DTM01") == "036":
+                    current_transaction.update(date_data)
+                if seg_data.get_value("DTM01") in ["232", "233", "050", "150", "151", "472"]:
+                    current_claim.update(date_data)
+            if seg_id == "REF":
+                if seg_data.get_value("REF01") in ["EV", "PQ"]:
+                    global_info.update(
+                        dict(zip([i + seg_data.get_value("REF01") for i in segment_data.keys()], segment_data.values()))
+                    )
+                if seg_data.get_value("REF01") in ["0K"]:
+                    current_claim.update(
+                        dict(zip([i + seg_data.get_value("REF01") for i in segment_data.keys()], segment_data.values()))
+                    )
             # Handle transaction-level data (ST-SE)
-            if seg_id == "ST":
-                # Start a new transaction, initialize claims list
+            if seg_id == "GS":
                 current_transaction = {
-                    **segment_data,  # Include all dynamic IDs and values from ST segment
-                    "Payer Information": {},
-                    "Payee Information": {}
+                    **global_info,
+                    **segment_data
                 }
+            if seg_id == "ST":
+                current_transaction.update(segment_data)
+            if seg_id == "BPR":
+                current_transaction.update(segment_data)
 
-            elif seg_id == "CLP":
-                # Start a new claim, initialize service lines list
-                current_claim = {
-                    **segment_data,  # Include all dynamic IDs and values from CLP segment
-                    "Service Lines": []  # Initialize empty list for service lines
-                }
-
-            elif seg_id == "SVC":
-
-                # Append the flattened service line entry to the list for DataFrame creation
-                flattened_data.append({
-                    **current_transaction,  # Include all transaction-level data
-                    **current_claim,        # Include all claim-level data
-                    **segment_data          # Include all service line (SVC) data
-                })
-
+            # Start a new claim
+            if seg_id == "CLP":
+                current_claim = {**segment_data}
+                current_service_line = None  # Reset current service line at new claim level
             elif seg_id == "NM1":
-                # Capture patient information when NM101 (entity identifier code) is "QC" (indicating the patient)
-                if segment_data.get("NM101") == "QC":
-                    current_claim.update({
-                        "Patient Last Name": segment_data.get("NM103"),
-                        "Patient First Name": segment_data.get("NM104"),
-                        "Patient Middle Name": segment_data.get("NM105"),
-                        "Patient Name Suffix": segment_data.get("NM107")
-                    })
-                # Optionally, capture provider information when NM101 == "82" (provider)
-                elif segment_data.get("NM101") == "82":
-                    current_claim.update({
-                        "Provider Last Name": segment_data.get("NM103"),
-                        "Provider First Name": segment_data.get("NM104"),
-                        "Provider Identifier": segment_data.get("NM109")
+                current_claim.update(
+                    dict(zip([i + seg_data.get_value("NM101") for i in segment_data.keys()], segment_data.values()))
+                )
+            elif seg_id == "CAS":
+                if current_service_line is not None:
+                    current_service_line.update({x+'service':segment_data[x] for x in segment_data.keys()})
+                else:
+                    current_claim.update({x+'claim':segment_data[x] for x in segment_data.keys()})
+            elif seg_id == "SVC":
+                # Start a new service line within the claim
+                current_service_line = {**segment_data}
+                claims.append({
+                    **current_claim,        # Include all claim-level data
+                    **current_service_line  # Include all service line (SVC) data
+                })
+            elif seg_id == "SE":
+                # Store SE segment information
+                current_se = {**segment_data}
+
+                # Attach SE info to each claim and append to flattened_data
+                for claim in claims:
+                    flattened_data.append({
+                        **current_transaction,  # Include all transaction-level data
+                        **claim,                # Include claim and service line data
+                        **current_se            # Attach SE info to each claim
                     })
 
-            elif seg_id == "N1":
-                # Capture payer or payee information
-                if segment_data.get("N101") == "PR":  # Payer information
-                    current_transaction["Payer"] = segment_data.get("N102")
-                    current_transaction["Payer Information"] = {
-                        "Payer Name": segment_data.get("N102"),
-                        "Payer Identifier": segment_data.get("N104")
-                    }
-                elif segment_data.get("N101") == "PE":  # Payee information
-                    current_transaction["Payee"] = segment_data.get("N102")
-                    current_transaction["Payee Information"] = {
-                        "Payee Name": segment_data.get("N102"),
-                        "Payee Identifier": segment_data.get("N104")
-                    }
+                # Clear claims and reset current_transaction for the next iteration
+                claims = []
+                current_transaction = None
+                current_claim = None
+                current_se = None
+                current_cas = None
+                current_service_line = None
 
-            elif seg_id == 'PER':
-                # Check if contact info should belong to the payer or payee
-                if current_transaction["Payer Information"]:
-                    current_transaction["Payer Information"].update(segment_data)
-                elif current_transaction["Payee Information"]:
-                    current_transaction["Payee Information"].update(segment_data)
         # Create the DataFrame from the flattened data
         df = pd.DataFrame(flattened_data)
 
         # If column_names is True, replace the column names using the attributes dictionary
         if column_names:
-            df = df.rename(columns=lambda col: col + ' - ' +self.attrs.get(col, col))
+            df = df.rename(columns=lambda col: col + ' - ' + self.attrs.get(col, col))
 
         return df
