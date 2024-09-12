@@ -78,6 +78,58 @@ REF01 = {
     'TJ': 'Federal Taxpayer\'s Identification Number'
 }
 
+cas_descriptions = {
+    "CAS01": {
+        "CO": "Contractual Obligations",
+        "CR": "Correction and Reversals",
+        "OA": "Other Adjustments",
+        "PI": "Payer Initiated Reductions",
+        "PR": "Patient Responsibility"
+    },
+    "CAS02": "Adjustment Reason Code",
+    "CAS03": "Adjustment Amount",
+    "CAS04": "Quantity",
+    "CAS05": "Reserved",
+    "CAS06": "Reserved",
+    "CAS07": "Reserved",
+    "CAS08": "Reserved",
+    "CAS09": "Reserved",
+    "CAS10": "Reserved",
+    "CAS11": "Reserved",
+    "CAS12": "Reserved",
+    "CAS13": "Reserved",
+    "CAS14": "Reserved",
+    "CAS15": "Reserved",
+    "CAS16": "Reserved",
+    "CAS17": "Reserved",
+    "CAS18": "Reserved",
+    "CAS19": "Reserved"
+}
+
+ref_descriptions = {
+    "REF01": {
+        "EV": "Enrollment Verification Number",
+        "F2": "Provider Commercial Number",
+        "2U": "Payer Identification Number",
+        "TJ": "Federal Taxpayer’s Identification Number",
+        "1L": "Group or Policy Number",
+        "EA": "Medical Record Identification Number",
+        "CE": "Class of Contract Code",
+        "F8": "Original Reference Number",
+        "IG": "Insurance Policy Number",
+        "SY": "Social Security Number",
+        "XZ": "Medicaid Provider Number",
+        "D9": "Claim Number",
+        "G1": "Prior Authorization Number",
+        # Add more REF01 codes
+    },
+    "REF02": "Reference Identification",
+    "REF03": "Additional Reference Information",
+    "REF04": "Reserved"
+}
+
+
+
 claim_adjustment_group_codes = import_csv_to_dict(os.path.join(BASE_DIR,'codes','claim_adjustment_group_codes.csv'))
 
 claim_adjustment_reason_codes = import_csv_to_dict(os.path.join(BASE_DIR,'codes','claim_adjustment_reason_codes.csv'))

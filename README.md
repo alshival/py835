@@ -1,94 +1,108 @@
 <img src="DHR-Health-Logo.png" width="50%">
 
+# py835
 
-# PY835
-
-The `EDI835Parser` is a Python-based tool designed to parse `.835` EDI files using the `pyx12` library. It extracts critical information such as patient data and transaction details, providing an easy-to-use interface that outputs the parsed data as Pandas DataFrames for further analysis.
+This Python package provides functionality for parsing EDI 835 files using the `pyx12` library. It extracts and organizes data from the EDI file, such as transaction sets, claims, services, and functional groups, into a structured format like Pandas DataFrames for easy data manipulation and analysis. It also supports exporting parsed data to JSON.
 
 ## Features
-- **Parse EDI 835 Files**: Efficiently load and parse `.835` files to extract important financial and transaction data.
-- **Transaction Details**: Extract comprehensive transaction information, including service line data, payer, and payee information.
-- **Column Naming**: Optional renaming of DataFrame columns using dynamic attributes extracted from the EDI file.
+
+- **Parse EDI 835 Files:** Load and process `.835` EDI files for healthcare claims.
+- **Extract Data:** Extracts functional groups, transaction sets, claims, and service-level information.
+- **DataFrame Output:** Converts the parsed data into a Pandas DataFrame for easier analysis and manipulation.
+- **Column Renaming:** Automatically renames columns based on EDI segment codes and descriptions.
+- **JSON Export:** Supports exporting parsed data to JSON for further use in other systems.
 
 ## Installation
 
-To install `py835`, run 
-```
+To install this package, run the following command:
+
+```bash
 pip install git+https://github.com/DHR-Health/py835.git
 ```
 
+### Dependencies
+
+- `pyx12`: Python library for EDI file parsing.
+- `pandas`: Used for organizing parsed data into DataFrames.
+- `io`: Standard Python module for handling input/output operations.
+
 ## Usage
 
-`py835` is meant to streamline importing data from 835 files into your data warehouse.
-
-### Basic Example: Parsing an 835 EDI File for Line-Item Transactions
-
-Here is a simple example of how to parse a single `.835` file and extract its transaction details:
+### Parsing an EDI 835 File
 
 ```python
-import py835
+from py835 import Parser
 
-# Path to a single .835 file
-file_path = '/path/to/your/835/file.835'
+# Initialize the parser with the path to your EDI file
+edi_parser = Parser(file_path='path/to/your/file.835')
 
-# Initialize the parser
-parser = py835.EDI835Parser(file_path)
+# Get line item transactions as a Pandas DataFrame with pretty column names
+transactions_df = edi_parser.transactions(colnames=True)
 
-# Extract transaction data with optional renaming of columns
-transaction_df = parser.transactions(column_names=True)
-
-# Display the transaction data
-print(transaction_df)
-
-# Upload to a database
-import sqlite3
-conn = sqlite3.connect('example.db')
-transaction_df.to_sql('835_transaction_line_items',conn,index=False,if_exists='append')
+# Display the DataFrame
+print(transactions_df)
 ```
 
-### More Complicated Example: Parsing a Directory of 835 Files
+## Class Attributes
 
-If you need to process multiple `.835` files in a directory, the following example demonstrates how to loop through each file, extract the transaction data, and combine the results into a single DataFrame.
+The `Parser` class extracts data from the EDI 835 file and stores it in several class attributes for easy access and manipulation. Below is a breakdown of the key attributes:
 
-```python
-import os
-import re
-import py835
-import pandas as pd
+### `self.isa`
+- **Type:** Dictionary
+- **Description:** Stores data from the `ISA` (Interchange Control Header) segment, which includes general information such as sender/receiver IDs and interchange control numbers.
 
-# Directory containing .835 files
-directory_path = '/path/to/your/directory'
+### `self.functional_groups`
+- **Type:** List of dictionaries
+- **Description:** Contains data from `GS` (Functional Group Header) segments. Each dictionary represents one functional group and includes details such as functional group control numbers.
 
-# Initialize a list to hold all parsed DataFrames
-dfs = []
+### `self.transaction_sets`
+- **Type:** List of dictionaries
+- **Description:** Contains data from `ST` (Transaction Set Header) segments. Each dictionary represents a transaction set, storing details like transaction set control numbers and references.
 
-# Loop through files in the directory, parse, and extract transactions
-for file835 in [os.path.join(directory_path, x) for x in os.listdir(directory_path) if re.search(r'.*\.835.*', x)]:
-    parser = py835.EDI835Parser(file835)
-    transaction_data = parser.transactions(column_names=True)
-    transaction_data['file'] = file835  # Add the file name to each row
-    dfs.append(transaction_data)
+### `self.transaction_refs`
+- **Type:** List of dictionaries
+- **Description:** Stores `REF` (Reference Identification) segment data related to transaction sets. It includes references such as EV and F2 for the transaction set.
 
-# Combine all dataframes into one
-combined_df = pd.concat(dfs, ignore_index=True)
+### `self.claims`
+- **Type:** List of dictionaries
+- **Description:** Contains data from `CLP` (Claim Payment Information) segments. Each dictionary represents a claim, with details such as claim ID, claim status, total charge amount, and payment amount.
 
-# Display the combined dataframe
-print(combined_df)
+### `self.claims_refs`
+- **Type:** List of dictionaries
+- **Description:** Stores `REF` segment data related to claims. This includes claim-level references not directly included in the `CLP` segment (e.g., provider identifiers).
 
-# Upload to a database
-import sqlite3
-conn = sqlite3.connect('example.db')
-combined_df.to_sql('835_transaction_line_items',conn,index=False,if_exists='append')
-```
+### `self.claims_cas`
+- **Type:** List of dictionaries
+- **Description:** Contains data from `CAS` (Claim Adjustment) segments, which represent claim-level adjustments. Each dictionary holds adjustment reason codes, group codes, and amounts for the claim.
 
-## Methods
+### `self.services`
+- **Type:** List of dictionaries
+- **Description:** Contains data from `SVC` (Service Payment Information) segments, representing individual service-line items within a claim. Each dictionary stores service details such as service ID, billed amount, and allowed amount.
 
-- **`patients()`**: Returns a Pandas DataFrame containing patient-related information extracted from the `.835` file.
-- **`transactions(column_names=False)`**: Returns a Pandas DataFrame of transaction data. Optionally, renames columns based on attributes extracted from the file.
+### `self.services_cas`
+- **Type:** List of dictionaries
+- **Description:** Contains data from `CAS` segments, representing service-line adjustments. Each dictionary holds adjustment codes, group codes, and amounts for the specific service.
 
-## Dependencies
-- `pyx12`
-- `pandas`
+### `self.colnames`
+- **Type:** Dictionary
+- **Description:** A mapping of the column names dynamically created from segment identifiers. This can be used to rename columns in the resulting DataFrame for better readability.
+
+## File Structure
+
+- `Parser`: Main class responsible for loading and parsing the EDI 835 file.
+- `transactions()`: Method to extract parsed line item data into a Pandas DataFrame.
+- `colnames`: Dictionary that holds dynamic column names based on the EDI segment.
+
+## Contributing
+
+Contributions are welcome! Feel free to submit pull requests or open issues.
+
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a pull request
 
 ## License
-This project is licensed under the MIT License.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

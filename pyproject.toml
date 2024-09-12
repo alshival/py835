@@ -18,7 +18,9 @@ classifiers = [
 ]
 dependencies = [
     "pyx12>=2.3.3",
-    "setuptools>=74.1.2"
+    "setuptools>=74.1.2",
+    "numpy>=2.1.1",
+    "pandas>=2.2.2"
 ]
 
 [project.urls]
