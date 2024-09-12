@@ -350,12 +350,12 @@ class Parser:
             # 3. Join with claims on 'isa_id', 'functional_group_id', and 'statement_id'
             master_df = pd.merge(master_df, claims, on=['isa_id', 'functional_group_id', 'statement_id'], how='left')
 
-        # # 4. Join with services on 'isa_id', 'functional_group_id', 'statement_id', and 'claim_id'
-        # if not services.empty:
-        #     master_df = pd.merge(master_df, services, on=['isa_id', 'functional_group_id', 'statement_id', 'claim_id'], how='left')
+        # 4. Join with services on 'isa_id', 'functional_group_id', 'statement_id', and 'claim_id'
+        if not services.empty:
+            master_df = pd.merge(master_df, services, on=['isa_id', 'functional_group_id', 'statement_id', 'claim_id'], how='left')
 
-        # if colnames:
-        #     master_df = master_df.rename(self.colnames,axis=1)
+        if colnames:
+            master_df = master_df.rename(self.colnames,axis=1)
         # Return the final master DataFrame
         return master_df
     
