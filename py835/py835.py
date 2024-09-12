@@ -6,66 +6,9 @@ import pandas as pd
 from io import StringIO
 import os
 import json  # Add this for final JSON conversion
+from . import codes
 
-##########################################################################################
-# Codes
-##########################################################################################
-dtm_codes = {
-    '036': 'Coverage Expiration',
-    '050': 'Received',
-    '150': 'Service Period Start',
-    '151': 'Service Period End',
-    '232': 'Claim Statement Period Start',
-    '233': 'Claim Statement Period End',
-    '405': 'Production',
-    '472': 'Service Period'
-}
-
-
-# Pulled some of these from here: 
-# https://aging.ohio.gov/wps/wcm/connect/gov/bee80467-6343-48cc-8d2a-fedfbe4fc185/ODA835-5010.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE.Z18_K9I401S01H7F40QBNJU3SO1F56-bee80467-6343-48cc-8d2a-fedfbe4fc185-newl.nS
-ref_codes = {
-    '0B': 'State License Number',
-    '0K': 'Policy Form Identifying Number',
-    '1A': 'Blue Cross Provider Number',
-    '1B': 'Blue Shield Provider Number',
-    '1C': 'Medicare Provider Number',
-    '1D': 'Medicaid Provider Number',
-    '1G': 'Provider UPIN Number',
-    '1H': 'CHAMPUS Identification Number',
-    '1J': 'Facility ID Number',
-    '1L': 'Group or Policy Number',
-    '1S': 'Ambulatory Patient Group Number',
-    '1W': 'Member Identification Number',
-    '28': 'Employee Identification Number',
-    '2U': 'Payer Identification Number',
-    '6P': 'Group Number',
-    '6R': 'Provider Control Number',
-    '9A': 'Repriced Claim Reference Number',
-    '9C': 'Adjusted Repriced Claim Reference Number',
-    'APC': 'Ambulatory Payment Classification',
-    'BB': 'Authorization Number',
-    'CE': 'Class of Contract Code',
-    'D3': 'National Council for Prescription Drug Programs Pharmacy Number',
-    'E9': 'Attachment Code',
-    'EA': 'Medical Record Identification Number',
-    'EO': 'Submitter Identification Number',
-    'EV': 'Production',
-    'F2': 'Version Code',
-    'F8': 'Original Reference Number',
-    'G1': 'Prior Authorization Number',
-    'G2': 'Provider Commercial Number',
-    'G3': 'Predetermination of Benefits Identification Number',
-    'HPI': 'Centers for Medicare and Medicaid Services National Provider Identifier',
-    'IG': 'Insurance Policy Number',
-    'LU': 'Location Number',
-    'NF': 'National Association of Insurance Commissioners Code',
-    'PQ': 'Payee Identification',
-    'RB': 'Rate code number',
-    'SY': 'Social Security Number',
-    'TJ': 'Federal Taxpayer\'s Identification Number'
-}
-
+BASE_DIR = os.path.dirname(__file__)
 
 class EDI835Parser:
     def __init__(self, file_path):
@@ -101,7 +44,7 @@ class EDI835Parser:
         statements = []
         claims = []
         services = []
-
+        colnames = set()    
         for seg in self.context_reader.iter_segments():
             seg_node = seg.x12_map_node
             seg_data = seg.seg_data
@@ -114,10 +57,12 @@ class EDI835Parser:
                     [seg_data.get_value(child.id).strip() if seg_data.get_value(child.id) is not None else None for child in seg_node.children]
                 )
             )
-            attributes = set()
+            
             #### ISA (Interchange Control Header)
             if seg_id == 'ISA':
                 final_json['ISA'] = segment_data
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
 
             if seg_id == 'GS':
                 # Start a new functional group
@@ -125,7 +70,8 @@ class EDI835Parser:
                     'FunctionalGroupData': segment_data,
                     'Statements': []
                 }
-                functional_groups.append(current_functional_group)
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
 
             #### Start of a new Statement (ST)
             if seg_id == 'ST':
@@ -137,30 +83,46 @@ class EDI835Parser:
                     'StatementData': segment_data,
                     'Claims': []
                 }
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
 
             # Add BPR, TRN, REF, and DTM to the current statement
             if seg_id in ['BPR', 'TRN']:
                 current_statement['StatementData'].update(segment_data)
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
 
             if seg_id == 'REF' and seg_data.get_value("REF01") == 'EV':
                 current_statement['StatementData'].update(
-                    {ref_codes.get(seg_data.get_value("REF01"), "REF01" + seg_data.get_value("REF01"))+'-'+x: segment_data[x] for x in segment_data.keys()}
+                    {codes.REF01.get(seg_data.get_value("REF01"), "REF01" + seg_data.get_value("REF01"))+'-'+x: segment_data[x] for x in segment_data.keys()}
                 )
+                # Gather attributes:
+                colnames = colnames.union(
+                    set(
+                        (codes.REF01.get(seg_data.get_value("REF01"),"REF01"+seg_data.get_value("REF01")) +'-'+child.id, child.name) 
+                        for child in seg_node.children
+                        ))
 
             if seg_id == 'DTM' and seg_data.get_value("DTM01") == '405':
                 current_statement['StatementData'].update(segment_data)
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
 
             if seg_id == 'N1':
                 if seg_data.get_value("N101") == 'PR':
                     pe = False
                     current_statement['StatementData'].update(
-                        {x + '-Payer': segment_data[x] for x in segment_data}
+                        {x + '-Payer': segment_data[x] for x in segment_data.keys()}
                     )
+                    # Gather attributes:
+                    colnames = colnames.union(set((child.id+'-Payer', child.name) for child in seg_node.children))
                 elif seg_data.get_value("N101") == 'PE':
                     pe = True
                     current_statement['StatementData'].update(
-                        {x + '-Payee': segment_data[x] for x in segment_data}
+                        {x + '-Payee': segment_data[x] for x in segment_data.keys()}
                     )
+                    # Gather attributes:
+                    colnames = colnames.union(set((child.id+'-Payee', child.name) for child in seg_node.children))
 
             #### Claim (CLP)
             if seg_id == 'CLP':
@@ -177,62 +139,104 @@ class EDI835Parser:
                     'Services': []
                 }
 
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
+
             if seg_id == 'NM1':
                 # Patient Info
                 current_claim['ClaimData'].update(
                     {x + f'-{seg_data.get_value("NM101")}': segment_data[x] for x in segment_data.keys()}
                 )
+                # Gather attributes:
+                colnames = colnames.union(set((child.id + f'-{seg_data.get_value("NM101")}', child.name) for child in seg_node.children))
 
             if seg_id == 'REF' and seg_data.get_value("REF01") in ['EA', '6P', '28', 'F8', 'CE', '1L']:
                 current_claim['ClaimData'].update(
-                    {ref_codes.get(seg_data.get_value("REF01"), "REF01" + seg_data.get_value("REF01")): segment_data[x] for x in segment_data.keys()}
+                    {codes.REF01.get(seg_data.get_value("REF01"), "REF01" + seg_data.get_value("REF01")): segment_data[x] for x in segment_data.keys()}
                 )
+                # Gather attributes:
+                colnames = colnames.union(
+                    set(
+                        (codes.REF01.get(seg_data.get_value("REF01"),"REF01"+seg_data.get_value("REF01")) +'-'+child.id, child.name) 
+                        for child in seg_node.children)
+                    )
 
             if seg_id == 'DTM' and seg_data.get_value("DTM01") in ['232', '233', '050']:
                 current_claim['ClaimData'].update(
-                    {dtm_codes.get(seg_data.get_value("DTM01"), "DTM01" + seg_data.get_value("DTM01")): segment_data[x] for x in segment_data.keys()}
+                    {codes.DTM01.get(seg_data.get_value("DTM01"), "DTM01" + seg_data.get_value("DTM01") +'-'+x): segment_data[x] for x in segment_data.keys()}
                 )
+                # Gather attributes:
+                colnames = colnames.union(
+                    set(
+                        (codes.DTM01.get(seg_data.get_value("DTM01"),"DTM01" + seg_data.get_value("DTM01"))+'-'+child.id,child.name)
+                         for child in seg_node.children)
+                    )
+
 
             #### Service (SVC)
             if seg_id == 'SVC':
                 # Start a new service within the claim
                 current_service = segment_data
                 current_claim['Services'].append(current_service)
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
 
             # CAS (Claim and Service-Level Adjustments)
             if seg_id == 'CAS':
                 if current_service is None:
                     # This is a claim-level CAS
+                    new_insert = {f'CAS-{seg_data.get_value("CAS01")}-Claim-{x}': segment_data[x] for x in segment_data.keys()}
+                    new_insert.update({
+                            f'CAS-{seg_data.get_value("CAS01")}-Claim-CAS01-Description': codes.claim_adjustment_group_codes.get(seg_data.get_value("CAS01"),None)
+                        })
+                    
                     current_claim['ClaimData'].update(
-                        {f'CAS-{seg_data.get_value("CAS01")}-Claim': f'{seg_data.get_value("CAS02")} {seg_data.get_value("CAS03")}'}
+                        new_insert
                     )
+                    # Gather attributes:
+                    colnames = colnames.union(set((f'CAS-{seg_data.get_value("CAS01")}-Claim-{child.id}', child.name) for child in seg_node.children))
                 else:
                     # This is a service-level CAS
+                    new_insert = {f'CAS-{seg_data.get_value("CAS01")}-Service-{x}': segment_data[x] for x in segment_data.keys()}
                     current_service.update(
-                        {f'CAS-{seg_data.get_value("CAS01")}-Service': f'{seg_data.get_value("CAS02")} {seg_data.get_value("CAS03")}'}
+                        new_insert
                     )
+                    # Gather attributes:
+                    colnames = colnames.union(set((f'CAS-{seg_data.get_value("CAS01")}-Service-{child.id}', child.name) for child in seg_node.children))
 
             # AMT (Monetary Amount)
             if seg_id == 'AMT':
                 if current_service is None:
                     # This is a claim-level AMT
                     current_claim['ClaimData'].update(
-                        {f'AMT-{seg_data.get_value("AMT01")}-Claim': seg_data.get_value("AMT02")}
+                        {f'AMT-{seg_data.get_value("AMT01")}-Claim-'+x: segment_data[x] for x in segment_data.keys()}
                     )
+                    # Gather attributes:
+                    colnames = colnames.union(set((f'AMT-{seg_data.get_value("AMT01")}-Claim-'+child.id, child.name) for child in seg_node.children))
                 else:
                     # This is a service-level AMT
                     current_service.update(
-                        {f'AMT-{seg_data.get_value("AMT01")}-Service': seg_data.get_value("AMT02")}
+                        {f'AMT-{seg_data.get_value("AMT01")}-Service'+'-'+x: segment_data[x] for x in segment_data.keys()}
                     )
+                    # Gather attributes:
+                    colnames = colnames.union(set((f'AMT-{seg_data.get_value("AMT01")}-Service-'+child.id, child.name) for child in seg_node.children))
 
             # Handle DTM within SVC (Service Date)
             if seg_id == 'DTM' and seg_data.get_value("DTM01") == '472':
                 current_service.update(
-                    {dtm_codes.get(seg_data.get_value("DTM01"), "DTM" + seg_data.get_value("DTM01")): segment_data[x] for x in segment_data.keys()}
+                    {codes.DTM01.get(seg_data.get_value("DTM01"), "DTM" + seg_data.get_value("DTM01")): segment_data[x] for x in segment_data.keys()}
                 )
+                # Gather attributes:
+                colnames = colnames.union(
+                    set(
+                        (codes.DTM01.get(seg_data.get_value("DTM01"),"DTM01" + seg_data.get_value("DTM01"))+'-'+child.id,child.name)
+                         for child in seg_node.children)
+                    )
 
             #### End of Claim
             if seg_id == 'SE':
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
                 # Append the last service to the claim
                 if current_service:
                     current_claim['Services'].append(current_service)
@@ -252,6 +256,11 @@ class EDI835Parser:
 
             #### End of Functional Group (GE)
             if seg_id == 'GE':
+                current_functional_group['FunctionalGroupData'].update(segment_data)
+                
+                # Gather attributes:
+                colnames = colnames.union(set((child.id, child.name) for child in seg_node.children))
+
                 functional_groups.append(current_functional_group)
                 current_functional_group = None
 
@@ -260,16 +269,20 @@ class EDI835Parser:
 
         # Store the parsed JSON structure
         self.json = final_json
+        # Store the attributes (Column names)
+        self.colnames = {x:f'{x} {dict(colnames)[x]}' for x in dict(colnames).keys()}
+        self.colnames = {key: self.colnames[key] for key in sorted(self.colnames)}
 
-    def generate_ISA_table(self):
+    def generate_ISA_table(self,colnames=False):
         isa_data = self.json.get('ISA',{})
         isa_df = pd.DataFrame([isa_data])
         isa_df['ISA_ID'] = isa_df['ISA13']
         isa_df['file'] = self.file_path
-
+        if colnames:
+            isa_df = isa_df.rename(self.colnames,axis=1)
         return isa_df
     
-    def generate_functional_group_table(self):
+    def generate_functional_group_table(self,colnames=False):
         functional_groups = self.json.get('FunctionalGroups', [])
         
         # Flatten each functional group data and include the ISA_ID
@@ -282,10 +295,11 @@ class EDI835Parser:
             fg_data.append(fg_record)
         
         fg_df = pd.DataFrame(fg_data)
-        
+        if colnames:
+            fg_df = fg_df.rename(self.colnames,axis=1)
         return fg_df
     
-    def generate_statement_table(self):
+    def generate_statement_table(self,colnames=False):
         statements_data = []
         isa_id = self.json['ISA'].get('ISA13')
         
@@ -299,10 +313,12 @@ class EDI835Parser:
                 statements_data.append(statement_record)
         
         statements_df = pd.DataFrame(statements_data)
-        
+        if colnames:
+            statements_df = statements_df.rename(self.colnames,axis=1)
+        # Handle codes
         return statements_df
     
-    def generate_claim_table(self):
+    def generate_claim_table(self,colnames=False):
         claim_data = []
         isa_id = self.json['ISA'].get('ISA13')
         
@@ -320,9 +336,10 @@ class EDI835Parser:
                     claim_data.append(claim_record)
         
         claims_df = pd.DataFrame(claim_data)
-        
+        if colnames:
+            claims_df = claims_df.rename(self.colnames,axis=1)
         return claims_df
-    def generate_service_table(self):
+    def generate_service_table(self,colnames=False):
         service_data = []
         isa_id = self.json['ISA'].get('ISA13')
         
@@ -344,10 +361,22 @@ class EDI835Parser:
                         service_data.append(service_record)
         
         services_df = pd.DataFrame(service_data)
-        
+
+        # # Handle codes
+        # encoded_col = 'CAS-CO-Service-CAS01'
+        # translations = services_df[encoded_col].apply(lambda x: codes.claim_adjustment_group_codes.get(x,x))
+        # loc = services_df.columns.get_loc(encoded_col)+1
+        # services_df.insert(loc = loc, column=encoded_col+'-description',value = translations)
+        # encoded_col = 'CAS-P-Service-CAS01'
+        # translations = services_df[encoded_col].apply(lambda x: codes.claim_adjustment_group_codes.get(x,x))
+        # loc = services_df.columns.get_loc(encoded_col)+1
+        # services_df.insert(loc = loc, column=encoded_col+'-description',value = translations)
+
+        if colnames:
+            services_df = services_df.rename(self.colnames,axis=1)
         return services_df
     
-    def transactions(self):
+    def transactions(self,colnames=False):
         # Generate individual tables
         isa_df = self.generate_ISA_table()
         fg_df = self.generate_functional_group_table()
@@ -368,5 +397,7 @@ class EDI835Parser:
         # Step 4: Join Claims with Services (line items)
         full_transactions = pd.merge(isa_fg_statements_claims, services_df, left_on=['ISA_ID', 'GS06', 'ST02', 'CLP01'], right_on=['ISA_ID', 'FunctionalGroup_ID', 'Statement_ID', 'Claim_ID'], how='inner')
 
+        if colnames:
+            full_transactions = full_transactions.rename(self.colnames,axis=1)
         # Return the final merged DataFrame
         return full_transactions
