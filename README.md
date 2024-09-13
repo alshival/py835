@@ -43,6 +43,8 @@ edi_parser = Parser(file_path='path/to/your/file.835')
 
 The parser systematically breaks down the 835 data into hierarchical layers, reflecting the structure of the EDI 835 file:
 
+<img src="https://github.com/DHR-Health/py835/blob/main/835%20Structure.png">
+
 1. **ISA (Interchange Control Header):**  
    The top-level layer is the `ISA` segment, which contains metadata about the interchange, such as sender/receiver information, control numbers, and transaction timestamps. This segment serves as a unique identifier for the file. You can retrieve the ISA header data as JSON using `edi_parser.isa` and as a Pandas DataFrame via `edi_parser.isa_table()`. This allows for easy analysis of interchange metadata, including file-level information.
 
